@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_welcome_fragment">
+
+    <fragment
+        android:id="@+id/nav_welcome_fragment"
+        android:name="com.justfriends.fragment.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" />
+
+    <fragment
+        android:id="@+id/nav_sign_up_fragment"
+        android:name="com.justfriends.fragment.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" />
+    <fragment
+        android:id="@+id/nav_login_fragment"
+        android:name="com.justfriends.fragment.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_nav_login_fragment_to_forgotPasswordFragment"
+            app:destination="@id/nav_forgot_password_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_nav_login_fragment_to_nav_sign_up_fragment"
+            app:destination="@id/nav_sign_up_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/nav_forgot_password_fragment"
+        android:name="com.justfriends.fragment.ForgotPasswordFragment"
+        android:label="fragment_forgot_password"
+        tools:layout="@layout/fragment_forgot_password">
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/nav_otp_verification_fragment"
+        android:name="com.justfriends.fragment.OtpVerificationFragment"
+        android:label="fragment_otp_verification"
+        tools:layout="@layout/fragment_otp_verification">
+        <argument
+            android:name="country_code"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="mobile"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="name"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="email"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="password"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="uniqueId"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="otp"
+            android:defaultValue=""
+            app:argType="string" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/nav_chat_fragment"
+        android:name="com.justfriends.fragment.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" />
+    <fragment
+        android:id="@+id/nav_home_fragment"
+        android:name="com.justfriends.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_nav_home_fragment_to_searchFragment"
+            app:destination="@id/nav_search_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_nav_home_fragment_to_nav_search_fragment"
+            app:destination="@id/nav_search_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_nav_home_fragment_to_notificationFragment"
+            app:destination="@id/nav_notification_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_nav_home_fragment_to_nav_search_fragment2"
+            app:destination="@id/nav_search_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_nav_home_fragment_to_nav_search_kakao_location_fragment"
+            app:destination="@id/nav_search_kakao_location_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_my_account_fragment"
+        android:name="com.justfriends.fragment.MyAccountFragment"
+        android:label="fragment_my_account"
+        tools:layout="@layout/fragment_my_account">
+        <action
+            android:id="@+id/action_nav_my_account_fragment_to_changePasswordFragment"
+            app:destination="@id/nav_change_password_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_nav_my_account_fragment_to_nav_my_listings_fragment"
+            app:destination="@id/nav_my_listings_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_nav_my_account_fragment_to_editNameFragment"
+            app:destination="@id/nav_edit_name_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_nav_my_account_fragment_to_editEmailFragment"
+            app:destination="@id/nav_edit_email_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/nav_my_listings_fragment"
+        android:name="com.justfriends.fragment.MyListingsFragment"
+        android:label="fragment_my_listings"
+        tools:layout="@layout/fragment_my_listings" />
+    <fragment
+        android:id="@+id/nav_post_ad_fragment"
+        android:name="com.justfriends.fragment.AddPostFragment"
+        android:label="fragment_sell"
+        tools:layout="@layout/fragment_add_post">
+        <action
+            android:id="@+id/action_nav_sell_fragment_to_categoryFragment"
+            app:destination="@id/nav_category_Fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_nav_post_ad_fragment_to_nav_home_fragment"
+            app:destination="@id/nav_home_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <argument
+            android:name="cat_name"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="category_id"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="address"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="longitude"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="latitude"
+            android:defaultValue=""
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_nav_post_ad_fragment_to_searchKakaoLocationFragment"
+            app:destination="@id/nav_search_kakao_location_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+
+        </action>
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/nav_search_fragment"
+        android:name="com.justfriends.fragment.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search">
+        <argument
+            android:name="category_id"
+            android:defaultValue="0L"
+            app:argType="long" />
+        <argument
+            android:name="search_keyword"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="is_from_search"
+            android:defaultValue="false"
+            app:argType="boolean" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/nav_category_Fragment"
+        android:name="com.justfriends.fragment.CategoryFragment"
+        android:label="fragment_category"
+        tools:layout="@layout/fragment_category">
+        <action
+            android:id="@+id/action_nav_category_Fragment_to_subCategoryFragment"
+            app:destination="@id/nav_sub_category_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_sub_category_fragment"
+        android:name="com.justfriends.fragment.SubCategoryFragment"
+        android:label="fragment_sub_category"
+        tools:layout="@layout/fragment_sub_category">
+
+        <action
+            android:id="@+id/action_nav_sub_category_fragment_to_nav_post_ad_fragment"
+            app:destination="@id/nav_post_ad_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_post_detail_fragment"
+        android:name="com.justfriends.fragment.PostDetailFragment"
+        android:label="fragment_post_detail"
+        tools:layout="@layout/fragment_post_detail">
+        <action
+            android:id="@+id/action_nav_post_detail_fragment_to_publicProfileFragment"
+            app:destination="@id/nav_public_profile_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <argument
+            android:name="post_id"
+            app:argType="long" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/nav_see_all_reviews_fragment"
+        android:name="com.justfriends.fragment.SeeAllReviewsFragment"
+        android:label="fragment_see_all_reviews"
+        tools:layout="@layout/fragment_see_all_reviews">
+
+
+
+        <argument
+            android:name="user_id"
+            app:argType="long" />
+        <argument
+            android:name="user_name"
+            app:argType="string" />
+        <argument
+            android:name="user_img"
+            app:argType="string" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/nav_change_password_fragment"
+        android:name="com.justfriends.fragment.ChangePasswordFragment"
+        android:label="fragment_change_password"
+        tools:layout="@layout/fragment_change_password" />
+    <fragment
+        android:id="@+id/nav_public_profile_fragment"
+        android:name="com.justfriends.fragment.PublicProfileFragment"
+        android:label="fragment_public_profile"
+        tools:layout="@layout/fragment_public_profile">
+        <argument
+            android:name="user_id"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_nav_public_profile_fragment_to_addReviewFragment"
+            app:destination="@id/addReviewFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_nav_public_profile_fragment_to_nav_see_all_reviews_fragment"
+            app:destination="@id/nav_see_all_reviews_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <dialog
+        android:id="@+id/nav_foundation_dialog_fragment"
+        android:name="com.justfriends.fragment.FoundationDialogFragment"
+        android:label="fragment_foundation_dialog"
+        tools:layout="@layout/fragment_foundation_dialog">
+        <action
+            android:id="@+id/action_foundationDialogFragment_to_nav_post_ad_fragment"
+            app:destination="@id/nav_post_ad_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </dialog>
+    <fragment
+        android:id="@+id/nav_notification_fragment"
+        android:name="com.justfriends.fragment.NotificationFragment"
+        android:label="NotificationFragment" />
+    <fragment
+        android:id="@+id/nav_edit_name_fragment"
+        android:name="com.justfriends.fragment.EditNameFragment"
+        android:label="fragment_edit_name"
+        tools:layout="@layout/fragment_edit_name">
+        <argument
+            android:name="name"
+            android:defaultValue=""
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_nav_edit_name_fragment_to_nav_my_account_fragment"
+            app:destination="@id/nav_my_account_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_edit_email_fragment"
+        android:name="com.justfriends.fragment.EditEmailFragment"
+        android:label="EditEmailFragment">
+        <argument
+            android:name="email"
+            android:defaultValue=""
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_editEmailFragment_to_nav_my_account_fragment"
+            app:destination="@id/nav_my_account_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_search_kakao_location_fragment"
+        android:name="com.justfriends.fragment.SearchKakaoLocationFragment"
+        android:label="fragment_search_kakao_location"
+        tools:layout="@layout/fragment_search_kakao_location">
+        <action
+            android:id="@+id/action_nav_search_kakao_location_fragment_to_nav_post_ad_fragment"
+            app:destination="@id/nav_post_ad_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_nav_search_kakao_location_fragment_to_nav_post_ad_fragment2"
+            app:destination="@id/nav_post_ad_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_nav_search_kakao_location_fragment_to_nav_home_fragment"
+            app:destination="@id/nav_home_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <argument
+            android:name="isFrom"
+            android:defaultValue="false"
+            app:argType="boolean" />
+
+    </fragment>
+    <action
+        android:id="@+id/action_global_nav_otp_verification_fragment"
+        app:destination="@id/nav_otp_verification_fragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+    <action
+        android:id="@+id/action_global_nav_login_fragment"
+        app:destination="@id/nav_login_fragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"
+        app:popUpTo="@id/nav_welcome_fragment"
+        app:popUpToInclusive="true" />
+
+
+    <action
+        android:id="@+id/action_global_nav_home_fragment"
+        app:destination="@id/nav_home_fragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+    <action
+        android:id="@+id/action_global_nav_post_detail_fragment"
+        app:destination="@id/nav_post_detail_fragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+    <fragment
+        android:id="@+id/fullImageFragment"
+        android:name="com.justfriends.fragment.FullImageFragment"
+        android:label="fragment_full_image"
+        tools:layout="@layout/fragment_full_image">
+
+        <argument
+            android:name="images"
+            app:argType="string[]" />
+        <argument
+            android:name="clickedPosition"
+            android:defaultValue="0"
+            app:argType="integer" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_fullImageFragment"
+        app:destination="@id/fullImageFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+    <fragment
+        android:id="@+id/addReviewFragment"
+        android:name="com.justfriends.fragment.AddReviewFragment"
+        android:label="fragment_add_review"
+        tools:layout="@layout/fragment_add_review">
+        <argument
+            android:name="rating"
+            app:argType="float" />
+        <argument
+            android:name="comment"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="user_image"
+            app:argType="string" />
+        <argument
+            android:name="user_name"
+            app:argType="string" />
+        <argument
+            android:name="user_id"
+            app:argType="long" />
+        <argument
+            android:name="is_edit_review"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <argument
+            android:name="review_id"
+            app:argType="long"
+            android:defaultValue="0L" />
+    </fragment>
+
+</navigation>

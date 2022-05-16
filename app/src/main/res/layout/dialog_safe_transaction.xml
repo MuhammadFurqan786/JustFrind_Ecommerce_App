@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/noto_sans_kr_black"
+        android:text="@string/safe_transaction"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+        android:textColor="@color/color_primary_text"
+        app:layout_constraintStart_toStartOf="@id/gl_start"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_courier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/noto_sans_kr_black"
+        android:includeFontPadding="false"
+        android:text="@string/courier"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+        android:textColor="@color/color_primary_text"
+        app:layout_constraintStart_toStartOf="@id/gl_start"
+        app:layout_constraintTop_toBottomOf="@id/tv_name" />
+
+    <TextView
+        android:id="@+id/tv_courier_subtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/noto_sans_kr_black"
+        android:text="@string/courier_subtext"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+        app:layout_constraintBottom_toTopOf="@id/tv_direct_trading"
+        app:layout_constraintStart_toStartOf="@id/tv_courier"
+        app:layout_constraintTop_toBottomOf="@id/tv_courier" />
+
+    <TextView
+        android:id="@+id/tv_direct_trading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/noto_sans_kr_black"
+        android:includeFontPadding="false"
+        android:text="@string/direct_trading"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+        android:textColor="@color/color_primary_text"
+        app:layout_constraintStart_toStartOf="@id/gl_start"
+        app:layout_constraintTop_toBottomOf="@id/tv_courier_subtext" />
+
+    <TextView
+        android:id="@+id/tv_direct_trading_subtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/noto_sans_kr_black"
+        android:text="@string/you_can_easily_pay_for_direct_transactions_n_without_cash"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+        android:textColor="@color/color_primary_text"
+        app:layout_constraintStart_toStartOf="@id/tv_direct_trading"
+        app:layout_constraintTop_toBottomOf="@id/tv_direct_trading" />
+
+    <TextView
+        android:id="@+id/tv_card_accepted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:background="@color/color_bg_red"
+        android:fontFamily="@font/noto_sans_kr_black"
+        android:includeFontPadding="false"
+        android:padding="8dp"
+        android:text="@string/card_accepted"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+        android:textColor="@color/color_text_red"
+        app:layout_constraintBottom_toBottomOf="@id/tv_direct_trading"
+        app:layout_constraintStart_toEndOf="@id/tv_direct_trading"
+        app:layout_constraintTop_toTopOf="@id/tv_direct_trading" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.tizisdeepan:dots:1.0.1@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/1a71823f046517dc57fd8f055ed4cb7a/transformed/jetified-dots-1.0.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/1a71823f046517dc57fd8f055ed4cb7a/transformed/jetified-dots-1.0.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/1a71823f046517dc57fd8f055ed4cb7a/transformed/jetified-dots-1.0.1/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.tizisdeepan/dots/1.0.1/46348c99c530c8235b284a81d87942c197b2608/dots-1.0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

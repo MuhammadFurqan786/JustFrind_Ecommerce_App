@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:isScrollContainer="false">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        tools:context=".fragment.SoldFragment">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:backgroundTint="@color/color_primary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/top_app_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:navigationIcon="@drawable/ic_cancel"
+                    app:navigationIconTint="@color/white"
+                    app:titleTextAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                    app:titleTextColor="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/noto_sans_kr_medium"
+                    android:includeFontPadding="false"
+                    android:text="@string/post_ad"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                    android:textColor="@color/white" />
+
+                <ImageView
+                    android:id="@+id/iv_notification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="16dp"
+                    android:src="@drawable/ic_bell" />
+            </RelativeLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <TextView
+            android:id="@+id/tv_category"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_gray"
+            android:fontFamily="@font/noto_sans_kr_medium"
+            android:hint="@string/category"
+            android:includeFontPadding="false"
+            android:inputType="none"
+            android:paddingStart="16dp"
+            android:paddingTop="14dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="14dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            android:textColorHint="@color/color_primary_text"
+            app:drawableEndCompat="@drawable/ic_drop_arrow"
+            app:layout_constraintEnd_toEndOf="@id/gl_end"
+            app:layout_constraintStart_toStartOf="@id/gl_start"
+            app:layout_constraintTop_toBottomOf="@id/app_bar_layout" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_photos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="@id/iv_car"
+            app:layout_constraintEnd_toEndOf="@id/gl_end"
+            app:layout_constraintStart_toEndOf="@id/iv_car"
+            app:layout_constraintTop_toTopOf="@id/iv_car"
+            tools:itemCount="3"
+            tools:listitem="@layout/adapter_photos" />
+
+        <ImageView
+            android:id="@+id/iv_car"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/color_light"
+            android:src="@drawable/img_plus"
+            app:layout_constraintStart_toStartOf="@id/gl_start"
+            app:layout_constraintTop_toBottomOf="@id/tv_category" />
+
+        <TextView
+            android:id="@+id/tv_tip"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_sans_kr_regular"
+            android:includeFontPadding="false"
+            android:layout_marginTop="72dp"
+            android:text="@string/tip_add_at_least_3_photos"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            android:textColor="@color/color_primary_text"
+            app:layout_constraintEnd_toStartOf="@id/tv_photo_count"
+            app:layout_constraintStart_toStartOf="@id/iv_car"
+            app:layout_constraintTop_toBottomOf="@id/tv_category" />
+
+        <TextView
+            android:id="@+id/tv_photo_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_sans_kr_regular"
+            android:includeFontPadding="false"
+            android:text="@string/_4_10photos"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            android:textColor="@color/color_primary_text"
+            app:layout_constraintBottom_toBottomOf="@id/tv_tip"
+            app:layout_constraintEnd_toEndOf="@id/gl_end"
+            app:layout_constraintTop_toTopOf="@id/tv_tip" />
+
+        <EditText
+            android:id="@+id/et_title"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_gray"
+            android:fontFamily="@font/noto_sans_kr_medium"
+            android:hint="@string/title"
+            android:includeFontPadding="false"
+            android:inputType="text"
+            android:maxLength="50"
+            android:padding="16dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            android:textColor="@color/color_primary_text"
+            android:textColorHint="@color/color_primary_text"
+            app:icon="@drawable/ic_kakaotalk_logo"
+            app:layout_constraintEnd_toEndOf="@id/gl_end"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/gl_start"
+            app:layout_constraintTop_toBottomOf="@id/tv_tip" />
+
+        <TextView
+            android:id="@+id/tv_subtext_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_sans_kr_regular"
+            android:gravity="start"
+            android:includeFontPadding="false"
+            android:text="@string/description_of_field"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            app:layout_constraintEnd_toEndOf="@id/gl_end"
+            app:layout_constraintStart_toStartOf="@id/et_title"
+            app:layout_constraintTop_toBottomOf="@id/et_title" />
+
+
+        <EditText
+            android:id="@+id/et_price"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_gray"
+            android:fontFamily="@font/noto_sans_kr_medium"
+            android:hint="@string/price"
+            android:includeFontPadding="false"
+            android:inputType="number"
+            android:maxLength="10"
+            android:padding="16dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            android:textColor="@color/color_primary_text"
+            android:textColorHint="@color/color_primary_text"
+            app:icon="@drawable/ic_kakaotalk_logo"
+            app:layout_constraintEnd_toEndOf="@id/gl_end"
+            app:layout_constraintStart_toStartOf="@id/gl_start"
+            app:layout_constraintTop_toBottomOf="@id/tv_subtext_title" />
+
+        <TextView
+            android:id="@+id/tv_subtext_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_sans_kr_regular"
+            android:gravity="start"
+            android:includeFontPadding="false"
+            android:text="@string/set_a_competitive_price"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            app:layout_constraintEnd_toEndOf="@id/gl_end"
+            app:layout_constraintStart_toStartOf="@id/et_title"
+            app:layout_constraintTop_toBottomOf="@id/et_price" />
+
+        <TextView
+            android:id="@+id/tv_product_status"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_gray"
+            android:fontFamily="@font/noto_sans_kr_medium"
+            android:hint="@string/product_status"
+            android:includeFontPadding="false"
+            android:inputType="none"
+            android:padding="16dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            android:textColorHint="@color/color_primary_text"
+            app:drawableEndCompat="@drawable/ic_drop_arrow"
+            app:layout_constraintEnd_toEndOf="@id/gl_end"
+            app:layout_constraintStart_toStartOf="@id/gl_start"
+            app:layout_constraintTop_toBottomOf="@id/tv_subtext_price" />
+
+        <TextView
+            android:id="@+id/tv_subtext_product_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_sans_kr_regular"
+            android:gravity="start"
+            android:includeFontPadding="false"
+            android:text="@string/select_the_condition_that_fits_best"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            app:layout_constraintEnd_toEndOf="@id/gl_end"
+            app:layout_constraintStart_toStartOf="@id/et_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_product_status" />
+
+        <EditText
+            android:id="@+id/et_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_gray"
+            android:fontFamily="@font/noto_sans_kr_medium"
+            android:gravity="top"
+            android:hint="@string/description"
+            android:includeFontPadding="false"
+            android:inputType="textMultiLine"
+            android:minHeight="100dp"
+            android:padding="16dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            android:textColor="@color/color_primary_text"
+            android:textColorHint="@color/color_primary_text"
+            app:icon="@drawable/ic_kakaotalk_logo"
+            app:layout_constraintEnd_toEndOf="@id/gl_end"
+            app:layout_constraintStart_toStartOf="@id/gl_start"
+            app:layout_constraintTop_toBottomOf="@id/tv_subtext_product_status" />
+
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_gray"
+            android:fontFamily="@font/noto_sans_kr_medium"
+            android:hint="@string/location"
+            android:includeFontPadding="false"
+            android:inputType="none"
+            android:padding="16dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            android:textColorHint="@color/color_primary_text"
+            app:drawableEndCompat="@drawable/ic_drop_arrow"
+            app:layout_constraintEnd_toEndOf="@id/gl_end"
+            app:layout_constraintStart_toStartOf="@id/gl_start"
+            app:layout_constraintTop_toBottomOf="@id/et_description" />
+
+
+        <TextView
+            android:id="@+id/tv_charity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/noto_sans_kr_regular"
+            android:gravity="start"
+            android:includeFontPadding="false"
+            android:text="@string/do_you_want_to_charity"
+            android:textColor="@color/color_primary_text"
+            app:layout_constraintEnd_toEndOf="@id/gl_end"
+            app:layout_constraintStart_toStartOf="@id/tv_location"
+            app:layout_constraintTop_toBottomOf="@id/tv_location" />
+
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/toggle_charity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/tv_charity"
+            app:layout_constraintEnd_toEndOf="@id/gl_end"
+            app:layout_constraintTop_toTopOf="@id/tv_charity" />
+
+
+        <TextView
+            android:id="@+id/tv_foundation"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_gray"
+            android:fontFamily="@font/noto_sans_kr_medium"
+            android:hint="@string/select_the_foundation"
+            android:includeFontPadding="false"
+            android:inputType="none"
+            android:padding="16dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            android:textColorHint="@color/color_primary_text"
+            android:visibility="gone"
+            app:drawableEndCompat="@drawable/ic_drop_arrow"
+            app:layout_constraintEnd_toEndOf="@id/gl_end"
+            app:layout_constraintStart_toStartOf="@id/gl_start"
+            app:layout_constraintTop_toBottomOf="@id/tv_charity" />
+
+
+        <TextView
+            android:id="@+id/tv_post"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/color_primary"
+            android:fontFamily="@font/noto_sans_kr_medium"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:padding="8dp"
+            android:text="@string/post_ad"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <EditText
+            android:id="@+id/et_charitable_amount"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_gray"
+            android:fontFamily="@font/noto_sans_kr_medium"
+            android:hint="@string/enter_the_charitable_amount"
+            android:includeFontPadding="false"
+            android:inputType="number"
+            android:maxLength="8"
+            android:padding="16dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            android:textColor="@color/color_primary_text"
+            android:textColorHint="@color/color_primary_text"
+            android:visibility="gone"
+            app:icon="@drawable/ic_kakaotalk_logo"
+            app:layout_constraintEnd_toEndOf="@id/gl_end"
+            app:layout_constraintStart_toStartOf="@id/gl_start"
+            app:layout_constraintTop_toBottomOf="@id/tv_foundation" />
+
+
+        <CheckBox
+            android:id="@+id/cb_terms_conditions"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:buttonTint="@color/color_grey"
+            android:checked="false"
+            android:fontFamily="@font/noto_sans_kr_regular"
+            android:gravity="top"
+            android:text="@string/i_agree_terms_amp_condition"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            android:textColor="@color/color_grey"
+            app:layout_constraintBottom_toTopOf="@id/tv_post"
+            app:layout_constraintEnd_toEndOf="@id/gl_end"
+            app:layout_constraintStart_toStartOf="@id/gl_start"
+            app:layout_constraintTop_toBottomOf="@id/et_charitable_amount" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="16dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="16dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="100dp"
+        android:layout_height="5dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/color_primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_minimum"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/bg_gray_edit_textbox"
+        android:gravity="center"
+        android:hint="@string/minimum"
+        android:inputType="number"
+        android:padding="16dp"
+        android:textColor="@color/color_light_grey"
+        android:textColorHint="@color/color_light_text_gray"
+        app:layout_constraintEnd_toStartOf="@id/et_maximum"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="@id/gl_start"
+        app:layout_constraintTop_toBottomOf="@id/view_line" />
+
+    <EditText
+        android:id="@+id/et_maximum"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/bg_gray_edit_textbox"
+        android:gravity="center"
+        android:hint="@string/maximum"
+        android:inputType="number"
+        android:padding="16dp"
+        android:textColor="@color/color_light_grey"
+        android:textColorHint="@color/color_light_text_gray"
+        app:layout_constraintBottom_toBottomOf="@id/et_minimum"
+        app:layout_constraintEnd_toEndOf="@id/gl_end"
+        app:layout_constraintStart_toEndOf="@id/et_minimum"
+        app:layout_constraintTop_toTopOf="@id/et_minimum" />
+
+    <TextView
+        android:id="@+id/tv_conditions"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/noto_sans_kr_regular"
+        android:text="@string/conditions"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+        android:textColor="@color/color_primary_text"
+        app:layout_constraintEnd_toEndOf="@id/gl_end"
+        app:layout_constraintStart_toStartOf="@id/et_minimum"
+        app:layout_constraintTop_toBottomOf="@id/et_minimum" />
+
+    <EditText
+        android:id="@+id/et_select"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/bg_gray_edit_textbox"
+        android:gravity="center"
+        android:hint="@string/maximum"
+        android:inputType="number"
+        android:padding="16dp"
+        android:textColor="@color/color_light_grey"
+        android:textColorHint="@color/color_light_text_gray"
+        app:layout_constraintBottom_toBottomOf="@id/et_minimum"
+        app:layout_constraintEnd_toEndOf="@id/gl_end"
+        app:layout_constraintStart_toEndOf="@id/et_minimum"
+        app:layout_constraintTop_toTopOf="@id/et_minimum" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_select_condition"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint=""
+        app:boxStrokeColor="@android:color/transparent"
+        app:endIconDrawable="@drawable/ic_drop_dwn"
+        app:endIconMode="dropdown_menu"
+        app:layout_constraintEnd_toEndOf="@id/et_maximum"
+        app:layout_constraintStart_toStartOf="@id/et_minimum"
+        app:layout_constraintTop_toBottomOf="@id/tv_conditions">
+
+        <AutoCompleteTextView
+            android:id="@+id/autocomplete_buying_options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_gray_edit_textbox"
+            android:enabled="false"
+            android:hint="@string/select_condition"
+            android:textColor="@color/color_primary_text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/tv_distance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/noto_sans_kr_regular"
+        android:text="@string/distance"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+        android:textColor="@color/color_primary_text"
+        app:layout_constraintEnd_toEndOf="@id/gl_end"
+        app:layout_constraintStart_toStartOf="@id/et_minimum"
+        app:layout_constraintTop_toBottomOf="@id/input_layout_select_condition" />
+
+
+    <com.google.android.material.slider.RangeSlider
+        android:id="@+id/range_slider"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:value="0"
+        android:valueFrom="0"
+        android:valueTo="10"
+        app:labelBehavior="withinBounds"
+        app:layout_constraintEnd_toEndOf="@id/gl_end"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/gl_start"
+        app:layout_constraintTop_toBottomOf="@id/tv_distance"
+        app:thumbColor="@color/white"
+        app:tickColor="@color/color_primary"
+        app:trackColor="@color/color_light_text_gray" />
+
+    <TextView
+        android:id="@+id/tv_start_range"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/noto_sans_kr_regular"
+        android:gravity="start"
+        android:includeFontPadding="false"
+        android:text="@string/zero"
+        android:textColor="@color/color_light_text_gray"
+        app:layout_constraintEnd_toStartOf="@id/tv_end_range"
+        app:layout_constraintStart_toStartOf="@id/range_slider"
+        app:layout_constraintTop_toBottomOf="@id/range_slider" />
+
+    <TextView
+        android:id="@+id/tv_end_range"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/noto_sans_kr_regular"
+        android:gravity="end"
+        android:includeFontPadding="false"
+        android:text="@string/_10_miles"
+        android:textColor="@color/color_light_text_gray"
+        app:layout_constraintBottom_toBottomOf="@id/tv_start_range"
+        app:layout_constraintEnd_toEndOf="@id/gl_end"
+        app:layout_constraintStart_toEndOf="@id/tv_start_range"
+        app:layout_constraintTop_toTopOf="@id/tv_start_range" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp" />
+
+    <Button
+        android:id="@+id/bt_apply_filter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/bg_text_view"
+        android:text="@string/apply_filters"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+        app:layout_constraintEnd_toEndOf="@id/tv_end_range"
+        app:layout_constraintStart_toStartOf="@id/tv_start_range"
+        app:layout_constraintTop_toBottomOf="@id/tv_start_range" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
