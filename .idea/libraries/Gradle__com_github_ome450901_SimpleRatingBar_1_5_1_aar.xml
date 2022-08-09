@@ -1,13 +1,19 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.ome450901:SimpleRatingBar:1.5.1@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/6eafb14257947da0d8e320d7b0af7ce5/transformed/jetified-SimpleRatingBar-1.5.1/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/6eafb14257947da0d8e320d7b0af7ce5/transformed/jetified-SimpleRatingBar-1.5.1/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/6eafb14257947da0d8e320d7b0af7ce5/transformed/jetified-SimpleRatingBar-1.5.1/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/eddc713d1aadc7cfbbb80e0358e0aabd/transformed/jetified-SimpleRatingBar-1.5.1/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/eddc713d1aadc7cfbbb80e0358e0aabd/transformed/jetified-SimpleRatingBar-1.5.1/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/eddc713d1aadc7cfbbb80e0358e0aabd/transformed/jetified-SimpleRatingBar-1.5.1/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/3b81ef3612e4518198ba3989c9f9b791/transformed/jetified-SimpleRatingBar-1.5.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/3b81ef3612e4518198ba3989c9f9b791/transformed/jetified-SimpleRatingBar-1.5.1/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/3b81ef3612e4518198ba3989c9f9b791/transformed/jetified-SimpleRatingBar-1.5.1/res" />
+      <root url="jar://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/55e36ddb0492cfe2a1389d28254273f2/transformed/jetified-SimpleRatingBar-1.5.1/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/55e36ddb0492cfe2a1389d28254273f2/transformed/jetified-SimpleRatingBar-1.5.1/AndroidManifest.xml" />
+      <root url="file://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/55e36ddb0492cfe2a1389d28254273f2/transformed/jetified-SimpleRatingBar-1.5.1/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.ome450901/SimpleRatingBar/1.5.1/99352afd253222be6d63c51d3393cb83bd2e5dc3/SimpleRatingBar-1.5.1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/modules-2/files-2.1/com.github.ome450901/SimpleRatingBar/1.5.1/99352afd253222be6d63c51d3393cb83bd2e5dc3/SimpleRatingBar-1.5.1-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

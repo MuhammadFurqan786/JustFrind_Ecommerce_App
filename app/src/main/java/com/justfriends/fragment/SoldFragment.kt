@@ -12,6 +12,7 @@ import com.justfriends.databinding.FragmentSoldBinding
 import com.justfriends.interfaces.IMainActivity
 import com.justfriends.preference.PreferenceHelper
 import com.justfriends.preference.PreferenceKeys
+import com.justfriends.utils.PrefKeys
 import com.justfriends.viewModel.PostViewModel
 
 
@@ -39,7 +40,7 @@ class SoldFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        postViewModel.getSoldProduct(helper.getStringValue(PreferenceKeys.KEY_USER_TOKEN) ?: "")
+        postViewModel.getSoldProduct(helper.getStringValue(PrefKeys.KEY_USER_TOKEN) ?: "")
         setUpListener()
         setupObserver()
     }

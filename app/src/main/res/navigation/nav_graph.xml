@@ -75,17 +75,26 @@
             android:name="uniqueId"
             android:defaultValue=""
             app:argType="string" />
-        <argument
-            android:name="otp"
-            android:defaultValue=""
-            app:argType="string" />
+
 
     </fragment>
     <fragment
         android:id="@+id/nav_chat_fragment"
-        android:name="com.justfriends.fragment.ChatFragment"
+        android:name="com.justfriends.fragment.ChatListFragment"
         android:label="fragment_chat"
-        tools:layout="@layout/fragment_chat" />
+        tools:layout="@layout/fragment_list_chat">
+        <action
+            android:id="@+id/action_nav_chat_fragment_to_chatFragment"
+            app:destination="@id/chatFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+
+        </action>
+
+
+    </fragment>
     <fragment
         android:id="@+id/nav_home_fragment"
         android:name="com.justfriends.fragment.HomeFragment"
@@ -94,6 +103,14 @@
         <action
             android:id="@+id/action_nav_home_fragment_to_searchFragment"
             app:destination="@id/nav_search_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_nav_home_fragment_to_chat_fragment"
+            app:destination="@id/chatFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
@@ -280,6 +297,20 @@
         <argument
             android:name="post_id"
             app:argType="long" />
+        <action
+            android:id="@+id/action_nav_post_detail_fragment_to_chatFragment"
+            app:destination="@id/chatFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_nav_post_detail_fragment_to_shippingFragment"
+            app:destination="@id/shippingFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
 
     </fragment>
     <fragment
@@ -287,7 +318,6 @@
         android:name="com.justfriends.fragment.SeeAllReviewsFragment"
         android:label="fragment_see_all_reviews"
         tools:layout="@layout/fragment_see_all_reviews">
-
 
 
         <argument
@@ -320,14 +350,14 @@
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"/>
+            app:popExitAnim="@anim/slide_out_right" />
         <action
             android:id="@+id/action_nav_public_profile_fragment_to_nav_see_all_reviews_fragment"
             app:destination="@id/nav_see_all_reviews_fragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"/>
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <dialog
         android:id="@+id/nav_foundation_dialog_fragment"
@@ -410,7 +440,7 @@
         <argument
             android:name="isFrom"
             android:defaultValue="false"
-            app:argType="boolean" />
+            app:argType="boolean"    />
 
     </fragment>
     <action
@@ -491,12 +521,29 @@
             app:argType="long" />
         <argument
             android:name="is_edit_review"
-            app:argType="boolean"
-            android:defaultValue="false" />
+            android:defaultValue="false"
+            app:argType="boolean" />
         <argument
             android:name="review_id"
-            app:argType="long"
-            android:defaultValue="0L" />
+            android:defaultValue="0L"
+            app:argType="long" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.justfriends.fragment.SingleChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat">
+        <argument
+            android:name="channel_url"
+            android:defaultValue=""
+            app:argType="string" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/shippingFragment"
+        android:name="com.justfriends.fragment.ShippingFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/activity_shipping">
     </fragment>
 
 </navigation>

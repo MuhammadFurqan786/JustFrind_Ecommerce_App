@@ -1,15 +1,24 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.test:runner:1.4.0@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/093405da8d04a30409a341b92ea4089a/transformed/runner-1.4.0/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/093405da8d04a30409a341b92ea4089a/transformed/runner-1.4.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/093405da8d04a30409a341b92ea4089a/transformed/runner-1.4.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/51b2d18077a03d2129e58776fca59383/transformed/runner-1.4.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/51b2d18077a03d2129e58776fca59383/transformed/runner-1.4.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/51b2d18077a03d2129e58776fca59383/transformed/runner-1.4.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/947d59c3bc0d547723885230dff68c65/transformed/runner-1.4.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/947d59c3bc0d547723885230dff68c65/transformed/runner-1.4.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/947d59c3bc0d547723885230dff68c65/transformed/runner-1.4.0/res" />
+      <root url="file://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/947d59c3bc0d547723885230dff68c65/transformed/runner-1.4.0/res" />
+      <root url="file://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/23f81a0463dc6d746b83d5a80db3095c/transformed/runner-1.4.0/res" />
+      <root url="jar://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/b26e7d373200ec3725df1613b4ed49d2/transformed/runner-1.4.0/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/b26e7d373200ec3725df1613b4ed49d2/transformed/runner-1.4.0/res" />
+      <root url="file://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/b26e7d373200ec3725df1613b4ed49d2/transformed/runner-1.4.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.test/runner/1.4.0/aee6a62a26d9b413dadc1732e66cc4ef3bcf9d61/runner-1.4.0-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/modules-2/files-2.1/androidx.test/runner/1.4.0/aee6a62a26d9b413dadc1732e66cc4ef3bcf9d61/runner-1.4.0-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.test/runner/1.4.0/11ef580a9f2ea2fba4d060a3121506197bd6b183/runner-1.4.0-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/modules-2/files-2.1/androidx.test/runner/1.4.0/11ef580a9f2ea2fba4d060a3121506197bd6b183/runner-1.4.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

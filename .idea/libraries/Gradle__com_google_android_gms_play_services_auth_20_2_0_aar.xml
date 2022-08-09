@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.android.gms:play-services-auth:20.2.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/f5f2decaa88bc93f1a319b16f4805faa/transformed/jetified-play-services-auth-20.2.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/f5f2decaa88bc93f1a319b16f4805faa/transformed/jetified-play-services-auth-20.2.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/f5f2decaa88bc93f1a319b16f4805faa/transformed/jetified-play-services-auth-20.2.0/AndroidManifest.xml" />
+      <root url="file://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/d8dde048fb06d2078fb7ff5da8c25298/transformed/jetified-play-services-auth-20.2.0/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/d8dde048fb06d2078fb7ff5da8c25298/transformed/jetified-play-services-auth-20.2.0/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/d8dde048fb06d2078fb7ff5da8c25298/transformed/jetified-play-services-auth-20.2.0/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/modules-2/files-2.1/com.google.android.gms/play-services-auth/20.2.0/f981681ae590a1a8900cc9081ba4007b4d4246aa/play-services-auth-20.2.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>

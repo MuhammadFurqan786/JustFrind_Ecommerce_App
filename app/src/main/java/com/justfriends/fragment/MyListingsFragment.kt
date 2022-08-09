@@ -16,9 +16,12 @@ class MyListingsFragment : Fragment(), SellingFragment.ISettingItem {
     private lateinit var binding: FragmentMyListingsBinding
     private var mListingsAdapter: MyListingsAdapter? = null
     private var pages = arrayOf(
+
+
+        SoldFragment.newInstance(),
         FavoritesFragment.newInstance(),
-        SellingFragment.newInstance(this),
-        SoldFragment.newInstance())
+        SellingFragment.newInstance(this)
+    )
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -45,9 +48,9 @@ class MyListingsFragment : Fragment(), SellingFragment.ISettingItem {
         binding.homeViewPager.adapter = mListingsAdapter
         TabLayoutMediator(binding.homeTabView, binding.homeViewPager) { tab, position ->
             when (position) {
-                1 -> tab.text = getString(R.string.selling)
-                2 -> tab.text = getString(R.string.sold)
-                else -> tab.text = getString(R.string.favorites)
+                0 -> tab.text = getString(R.string.sold)
+                1 -> tab.text = getString(R.string.favorites)
+                else -> tab.text = getString(R.string.selling)
             }
 
         }.attach()

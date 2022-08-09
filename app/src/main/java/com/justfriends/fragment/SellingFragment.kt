@@ -16,6 +16,7 @@ import com.justfriends.interfaces.IMainActivity
 import com.justfriends.model.Post
 import com.justfriends.preference.PreferenceHelper
 import com.justfriends.preference.PreferenceKeys
+import com.justfriends.utils.PrefKeys
 import com.justfriends.viewModel.MyListingViewModel
 import com.justfriends.viewModel.PostViewModel
 
@@ -42,7 +43,7 @@ class SellingFragment(var callback: ISettingItem) : Fragment(),
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        myListingViewModel.getMyMarketPlacePosts(helper.getStringValue(PreferenceKeys.KEY_USER_TOKEN) ?: "")
+        myListingViewModel.getMyMarketPlacePosts(helper.getStringValue(PrefKeys.KEY_USER_TOKEN) ?: "")
         setUpObserver()
         setupMarkAsSoldObserver()
         setupPostDetailObservers()
@@ -76,10 +77,10 @@ class SellingFragment(var callback: ISettingItem) : Fragment(),
                     .setMessage("Your product is successfully marked as sold!")
                     .setPositiveButton(getString(R.string.ok)) { dialog, which ->
                         dialog.dismiss()
-                        callback.onItemSold(2)
+                        callback.onItemSold(0)
                     }
                     .show()
-                myListingViewModel.getMyMarketPlacePosts(helper.getStringValue(PreferenceKeys.KEY_USER_TOKEN) ?: "")
+                myListingViewModel.getMyMarketPlacePosts(helper.getStringValue(PrefKeys.KEY_USER_TOKEN) ?: "")
 
             }
         }
@@ -131,7 +132,7 @@ class SellingFragment(var callback: ISettingItem) : Fragment(),
                 when (which) {
                     0 -> {
                         myListingViewModel.markAsSold(
-                            helper.getStringValue(PreferenceKeys.KEY_USER_TOKEN) ?: "",
+                            helper.getStringValue(PrefKeys.KEY_USER_TOKEN) ?: "",
                             post.id!!
                         )
                     }

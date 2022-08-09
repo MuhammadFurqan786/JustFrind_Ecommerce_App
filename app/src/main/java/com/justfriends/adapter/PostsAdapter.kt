@@ -17,15 +17,15 @@ import kotlin.collections.ArrayList
 class PostsAdapter : RecyclerView.Adapter<PostsAdapter.PostViewHolder>() {
     private lateinit var mContext: Context
     private val posts = ArrayList<Post>()
-    private var mCallback:IPost?=null
+    private var mCallback: IPost? = null
 
 
     inner class PostViewHolder(
         private var binding: AdapterHomeItemsBinding,
-        ) : RecyclerView.ViewHolder(binding.root) {
+    ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bindView(post: Post) {
-            
+
             Glide.with(mContext)
                 .load(Global.getImageUrl(post.img))
                 .placeholder(R.drawable.ic_empty_photo)
@@ -69,6 +69,9 @@ class PostsAdapter : RecyclerView.Adapter<PostsAdapter.PostViewHolder>() {
                 )
             )
 
+            binding.tvTrading.setOnClickListener {
+                mCallback?.onTradingClick(post.id, post.userId, adapterPosition)
+            }
         }
     }
 
@@ -98,22 +101,23 @@ class PostsAdapter : RecyclerView.Adapter<PostsAdapter.PostViewHolder>() {
         return posts.size
     }
 
-    fun setData(data:List<Post>){
-        if(posts.isNotEmpty()){
+    fun setData(data: List<Post>) {
+        if (posts.isNotEmpty()) {
             posts.clear()
         }
-        for (post in data){
+        for (post in data) {
             posts.add(post)
         }
         notifyDataSetChanged()
     }
 
-    fun setOnPostClickListener(callback: IPost){
+    fun setOnPostClickListener(callback: IPost) {
         mCallback = callback
     }
 
     interface IPost {
         fun onItemClick(post: Post)
         fun onFavClick(postId: Long, isFav: Int, position: Int)
+        fun onTradingClick(postId: Long, userId: Int, position: Int)
     }
 }

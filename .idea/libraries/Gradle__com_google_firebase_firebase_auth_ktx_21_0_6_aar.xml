@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.firebase:firebase-auth-ktx:21.0.6@aar">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/d63eca7677626a79b31b2027e74d2ead/transformed/jetified-firebase-auth-ktx-21.0.6/res" />
+      <root url="file://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/b9c56edff288c237821404400abea311/transformed/jetified-firebase-auth-ktx-21.0.6/res" />
+      <root url="file://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/b9c56edff288c237821404400abea311/transformed/jetified-firebase-auth-ktx-21.0.6/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/b9c56edff288c237821404400abea311/transformed/jetified-firebase-auth-ktx-21.0.6/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/modules-2/files-2.1/com.google.firebase/firebase-auth-ktx/21.0.6/589938eb1c3bb67b6850fdf1347e03d6e426f4be/firebase-auth-ktx-21.0.6-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>

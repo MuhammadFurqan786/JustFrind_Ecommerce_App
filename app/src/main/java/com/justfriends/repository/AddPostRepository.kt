@@ -3,7 +3,6 @@ package com.justfriends.repository
 
 import android.util.Log
 import com.justfriends.model.AddPostResModel
-import com.justfriends.model.GlobalResModel
 import com.justfriends.model.UploadPostModel
 import com.justfriends.network.RetrofitService
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
@@ -32,6 +31,7 @@ class AddPostRepository(private val apiService: RetrofitService) : BaseRepositor
                         post.production_condition.toRequestBody("multipart/form-data".toMediaTypeOrNull()),
                         post.is_charity.toRequestBody("multipart/form-data".toMediaTypeOrNull()),
                         post.foundation_id.toRequestBody("multipart/form-data".toMediaTypeOrNull()),
+                        post.foundation_name.toRequestBody("multipart/form-data".toMediaTypeOrNull()),
                         post.charity_amt.toRequestBody("multipart/form-data".toMediaTypeOrNull()),
                         post.terms.toRequestBody("multipart/form-data".toMediaTypeOrNull())
                     ).await()

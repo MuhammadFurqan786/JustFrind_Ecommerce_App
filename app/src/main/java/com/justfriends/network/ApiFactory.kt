@@ -18,9 +18,8 @@ object ApiFactory {
 
     private const val API_TIMEOUT: Long = 60
 
-    private const val BASE_URL = "http://3.101.65.155/api/"
-    const val IMAGE_BASE_URL = "http://144.91.80.25:4005/"
-    const val BASE_URL_CALL = "http://3.101.65.155/api/"
+    private const val BASE_URL = "http://ec2-54-219-170-27.us-west-1.compute.amazonaws.com/api/"
+    const val IMAGE_BASE_URL = "http://ec2-54-219-170-27.us-west-1.compute.amazonaws.com/"
 
 
 
@@ -43,7 +42,7 @@ object ApiFactory {
         } catch (e: ActivityNotFoundException) {
             e.printStackTrace()
         }
-        return OkHttpClient()
+        return OkHttpClient() 
 
     }
 
@@ -59,7 +58,7 @@ object ApiFactory {
         return Retrofit.Builder()
             .client(okHttpClient)
             .addConverterFactory(GsonConverterFactory.create(gson))
-            .baseUrl(BASE_URL_CALL)
+            .baseUrl(BASE_URL)
             .build()
     }
 

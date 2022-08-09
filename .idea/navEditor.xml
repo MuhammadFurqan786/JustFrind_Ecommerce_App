@@ -45,6 +45,18 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="chatFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="633" />
+                            <option name="y" value="352" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="fullImageFragment">
                     <value>
                       <LayoutPositions>
@@ -98,6 +110,15 @@
                             <option name="x" value="572" />
                             <option name="y" value="12" />
                           </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_nav_chat_fragment_to_chatFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
                         </option>
                       </LayoutPositions>
                     </value>
@@ -358,7 +379,17 @@
                         </option>
                         <option name="myPositions">
                           <map>
+                            <entry key="action_nav_post_detail_fragment_to_chatFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
                             <entry key="action_nav_post_detail_fragment_to_publicProfileFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_nav_post_detail_fragment_to_shippingFragment">
                               <value>
                                 <LayoutPositions />
                               </value>
@@ -489,6 +520,18 @@
                           <Point>
                             <option name="x" value="12" />
                             <option name="y" value="12" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="shippingFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="1708" />
+                            <option name="y" value="424" />
                           </Point>
                         </option>
                       </LayoutPositions>

@@ -1,0 +1,24 @@
+<component name="libraryTable">
+  <library name="Gradle: org.conscrypt:conscrypt-android:2.2.1@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/63254a7c04dec3170f0470d68f30804a/transformed/jetified-conscrypt-android-2.2.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/26163bc2d3953483b9eff21d76e79043/transformed/jetified-conscrypt-android-2.2.1/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/26163bc2d3953483b9eff21d76e79043/transformed/jetified-conscrypt-android-2.2.1/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/26163bc2d3953483b9eff21d76e79043/transformed/jetified-conscrypt-android-2.2.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/e521bbed3ac485404e288211cf044ba3/transformed/jetified-conscrypt-android-2.2.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/e521bbed3ac485404e288211cf044ba3/transformed/jetified-conscrypt-android-2.2.1/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/e521bbed3ac485404e288211cf044ba3/transformed/jetified-conscrypt-android-2.2.1/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/e521bbed3ac485404e288211cf044ba3/transformed/jetified-conscrypt-android-2.2.1/res" />
+      <root url="file://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/46fb841684b4d430a98be4c3a8b1a0c2/transformed/jetified-conscrypt-android-2.2.1/res" />
+      <root url="file://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/dab686563859e843082c6342636c0db4/transformed/jetified-conscrypt-android-2.2.1/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/dab686563859e843082c6342636c0db4/transformed/jetified-conscrypt-android-2.2.1/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/dab686563859e843082c6342636c0db4/transformed/jetified-conscrypt-android-2.2.1/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/modules-2/files-2.1/org.conscrypt/conscrypt-android/2.2.1/6227378b27dc80522cf488007730c31ffa21c4b0/conscrypt-android-2.2.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/modules-2/files-2.1/org.conscrypt/conscrypt-android/2.2.1/ff36046822c994d3ea26529e1cbf45f3d0b80173/conscrypt-android-2.2.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

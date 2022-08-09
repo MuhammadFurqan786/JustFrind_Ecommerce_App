@@ -1,12 +1,18 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.android.libraries.places:places:2.4.0@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/f7ec4d612fe7c8b6a29159c24774d85e/transformed/jetified-places-2.4.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/f7ec4d612fe7c8b6a29159c24774d85e/transformed/jetified-places-2.4.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/f7ec4d612fe7c8b6a29159c24774d85e/transformed/jetified-places-2.4.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/05984b98a156614bf821f46648d36fcd/transformed/jetified-places-2.4.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/05984b98a156614bf821f46648d36fcd/transformed/jetified-places-2.4.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/05984b98a156614bf821f46648d36fcd/transformed/jetified-places-2.4.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/0c3bf111a35d3d9fa06c4202e9b92571/transformed/jetified-places-2.4.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/0c3bf111a35d3d9fa06c4202e9b92571/transformed/jetified-places-2.4.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/0c3bf111a35d3d9fa06c4202e9b92571/transformed/jetified-places-2.4.0/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/e02ff54593cff58a474d63aa05ee0986/transformed/jetified-places-2.4.0/AndroidManifest.xml" />
+      <root url="file://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/e02ff54593cff58a474d63aa05ee0986/transformed/jetified-places-2.4.0/res" />
+      <root url="jar://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/e02ff54593cff58a474d63aa05ee0986/transformed/jetified-places-2.4.0/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.libraries.places/places/2.4.0/5ed6dd1c8202b5c622548077d727cf02512ccae7/places-2.4.0-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/modules-2/files-2.1/com.google.android.libraries.places/places/2.4.0/5ed6dd1c8202b5c622548077d727cf02512ccae7/places-2.4.0-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES />
   </library>

@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.firebase:firebase-core:21.0.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/5dae830f5fc6d14366c9e3296cd71b09/transformed/jetified-firebase-core-21.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/5dae830f5fc6d14366c9e3296cd71b09/transformed/jetified-firebase-core-21.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/5dae830f5fc6d14366c9e3296cd71b09/transformed/jetified-firebase-core-21.0.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/296c8176f92bf16aebf823a782116293/transformed/jetified-firebase-core-21.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/296c8176f92bf16aebf823a782116293/transformed/jetified-firebase-core-21.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/296c8176f92bf16aebf823a782116293/transformed/jetified-firebase-core-21.0.0/AndroidManifest.xml" />
+      <root url="file://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/296c8176f92bf16aebf823a782116293/transformed/jetified-firebase-core-21.0.0/res" />
+      <root url="file://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/6ecd1dce25cf8e4323642c24077c8dc6/transformed/jetified-firebase-core-21.0.0/res" />
+      <root url="file://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/978828b2e4ed4deacce11d444b133ee5/transformed/jetified-firebase-core-21.0.0/res" />
+      <root url="file://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/978828b2e4ed4deacce11d444b133ee5/transformed/jetified-firebase-core-21.0.0/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/978828b2e4ed4deacce11d444b133ee5/transformed/jetified-firebase-core-21.0.0/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/modules-2/files-2.1/com.google.firebase/firebase-core/21.0.0/e30555d01f4b419de1eed6ceed27b98aedecf946/firebase-core-21.0.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>

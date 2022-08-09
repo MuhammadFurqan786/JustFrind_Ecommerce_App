@@ -18,6 +18,7 @@ import android.provider.Settings
 import android.text.Spannable
 import android.text.SpannableStringBuilder
 import android.text.style.ForegroundColorSpan
+import android.util.Log
 import android.view.*
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
@@ -35,8 +36,8 @@ import com.justfriends.databinding.FragmentAddPostBinding
 import com.justfriends.interfaces.IMainActivity
 import com.justfriends.model.FoundationItem
 import com.justfriends.preference.PreferenceHelper
-import com.justfriends.preference.PreferenceKeys
 import com.justfriends.utils.Global
+import com.justfriends.utils.PrefKeys
 import com.justfriends.viewModel.AddPostViewModel
 import com.nguyenhoanglam.imagepicker.model.Image
 import com.nguyenhoanglam.imagepicker.ui.imagepicker.ImagePicker
@@ -51,7 +52,7 @@ class AddPostFragment : Fragment(), PhotosAdapter.PhotosClickInterface,
     private var photosAdapter: PhotosAdapter? = null
     private var chooseOptDia: Dialog? = null
     private var mCurrentPhotoPath: String? = null
-    private val ROOT_DIR_DCIM: String = Environment.DIRECTORY_DCIM
+    private val ROOT_DIR_DCIM: String = Environment.DIRECTORY_PICTURES
     private val addPostViewModel: AddPostViewModel by viewModels()
     private var mMaxImageSelectionCount: Int = 10
     private var mIMainActivity: IMainActivity? = null
@@ -62,11 +63,13 @@ class AddPostFragment : Fragment(), PhotosAdapter.PhotosClickInterface,
     private var isCharityValue = 0
     private var mFoundationName = ""
     private lateinit var helper: PreferenceHelper
-
+    private var someStateValue = 0
+    private val SOME_VALUE_KEY = "someValueToSave"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         helper = PreferenceHelper.getPref(requireContext())
+
     }
 
     override fun onCreateView(
@@ -74,21 +77,27 @@ class AddPostFragment : Fragment(), PhotosAdapter.PhotosClickInterface,
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentAddPostBinding.inflate(inflater, container, false)
+        if (savedInstanceState != null) {
+            someStateValue = savedInstanceState.getInt(SOME_VALUE_KEY)
+            // Do something with value if needed
+        }
         return binding.root
     }
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        activity?.window?.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE)
         mCategoryId = helper.getStringValue("category_id").toString()
         binding.tvCategory.text = navArgs.catName
         binding.tvLocation.text = navArgs.address
         photosAdapter = PhotosAdapter()
         photosAdapter?.onPhotosClickListener(this)
-        addPostViewModel.removeAllImages()
+        addPostViewModel.removeAllImagesBitMap()
         setupAdapter()
         setupObserver()
         setupListener()
+        setAddress()
     }
 
 
@@ -107,7 +116,7 @@ class AddPostFragment : Fragment(), PhotosAdapter.PhotosClickInterface,
 
         addPostViewModel.getAddPostObserver.observe(viewLifecycleOwner) {
             if (it.success) {
-                addPostViewModel.removeAllImages()
+                addPostViewModel.removeAllImagesBitMap()
                 openSuccessDialog(it.data.productId)
             }
         }
@@ -204,11 +213,12 @@ class AddPostFragment : Fragment(), PhotosAdapter.PhotosClickInterface,
 
 
     private fun validatePostData() {
-        if (photosAdapter?.itemCount == 0) {
-            Global.showMessage(binding.root, getString(R.string.message_upload_image))
-        } else if (photosAdapter?.itemCount!! < 3) {
-            Global.showMessage(binding.root, getString(R.string.message_select_minimum_images))
-        } else if (binding.tvCategory.text.toString().trim().isEmpty()) {
+//        if (photosAdapter?.itemCount == 0) {
+//            Global.showMessage(binding.root, getString(R.string.message_upload_image))
+//        } else if (photosAdapter?.itemCount!! < 3) {
+//            Global.showMessage(binding.root, getString(R.string.message_select_minimum_images))
+//        } else
+            if (binding.tvCategory.text.toString().trim().isEmpty()) {
             Global.showMessage(binding.root, getString(R.string.message_select_category))
         } else if (binding.etTitle.text.toString().trim().isEmpty()) {
             Global.showMessage(binding.root, getString(R.string.message_product_title))
@@ -247,11 +257,18 @@ class AddPostFragment : Fragment(), PhotosAdapter.PhotosClickInterface,
             addPostViewModel.getPostData.charity_amt =
                 binding.etCharitableAmount.text.toString().trim()
             addPostViewModel.getPostData.terms = mTerms.toString()
-            addPostViewModel.getPostData.latitude = navArgs.latitude
-            addPostViewModel.getPostData.longitude = navArgs.longitude
+            addPostViewModel.getPostData.latitude =
+                mIMainActivity?.getPreference()?.getStringValue(PrefKeys.KEY_LATITUDE) ?: ""
+
+            addPostViewModel.getPostData.longitude =
+                mIMainActivity?.getPreference()?.getStringValue(PrefKeys.KEY_LONGITUDE) ?: ""
             addPostViewModel.getPostData.sub_category_id = navArgs.categoryId
+            Log.d(
+                "TOKEN",
+                mIMainActivity?.getPreference()?.getStringValue(PrefKeys.KEY_USER_TOKEN) ?: ""
+            )
             addPostViewModel.addPost(
-                helper.getStringValue(PreferenceKeys.KEY_USER_TOKEN) ?: "",
+                mIMainActivity?.getPreference()?.getStringValue(PrefKeys.KEY_USER_TOKEN) ?: "",
                 helper.getCurrentUser()?.id.toString()
             )
         }
@@ -448,7 +465,7 @@ class AddPostFragment : Fragment(), PhotosAdapter.PhotosClickInterface,
         ImagePicker.with(this)
             .setFolderMode(true)
             .setFolderTitle(getString(R.string.album))
-            .setRootDirectoryName(ROOT_DIR_DCIM)
+            .setRootDirectoryName(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES).toString())
             .setDirectoryName(getString(R.string.image_picker))
             .setMultipleMode(true)
             .setShowNumberIndicator(true)
@@ -521,6 +538,7 @@ class AddPostFragment : Fragment(), PhotosAdapter.PhotosClickInterface,
         if (requestCode == Global.RC_CAMERA && resultCode == Activity.RESULT_OK) {
             val bitmap = BitmapFactory.decodeFile(File(mCurrentPhotoPath!!).absolutePath)
             addPostViewModel.addImage(mCurrentPhotoPath ?: "")
+            addPostViewModel.addImageBitmap(bitmap)
 
         } else if (ImagePicker.shouldHandleResult(
                 requestCode,
@@ -534,6 +552,8 @@ class AddPostFragment : Fragment(), PhotosAdapter.PhotosClickInterface,
                 val images: ArrayList<Image> = ImagePicker.getImages(data)
                 for (image in images) {
                     addPostViewModel.addImage(image.path)
+                    val bitmap = BitmapFactory.decodeFile(File(image.path).absolutePath)
+                    addPostViewModel.addImageBitmap(bitmap)
                 }
             } catch (e: Exception) {
             }
@@ -556,6 +576,35 @@ class AddPostFragment : Fragment(), PhotosAdapter.PhotosClickInterface,
         super.onDetach()
         mIMainActivity = null
     }
+
+    private fun setAddress() {
+        val address = Global.getAddress(
+            requireContext(),
+            mIMainActivity?.getPreference()?.getStringValue(PrefKeys.KEY_LATITUDE) ?: "",
+            mIMainActivity?.getPreference()?.getStringValue(PrefKeys.KEY_LONGITUDE) ?: ""
+        )
+
+        Log.d("TAG", "setAddress: address = $address")
+        address?.let {
+
+            val subLocality = it.subLocality ?: "Unnamed Area"
+            val subAdminArea = it.subAdminArea ?: "Unnamed Location"
+            binding.tvLocation.text = "$subLocality,$subAdminArea"
+        }
+
+
+    }
+
+    override fun onStop() {
+        super.onStop()
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        outState.putInt("SavedState",1)
+        super.onSaveInstanceState(outState)
+    }
+
+
 }
 
 

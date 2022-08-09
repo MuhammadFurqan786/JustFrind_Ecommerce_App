@@ -2,6 +2,7 @@ package com.justfriends.fragment
 
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -19,6 +20,7 @@ import com.justfriends.utils.Global
 import com.justfriends.viewModel.FavouriteViewModel
 
 import android.view.inputmethod.EditorInfo
+import com.iamport.sampleapp.ui.PaymentActivity
 import com.justfriends.NavGraphDirections
 import com.justfriends.model.Post
 import com.justfriends.utils.PrefKeys
@@ -72,6 +74,7 @@ class SearchFragment : Fragment(), PostsAdapter.IPost, SortDialogFragment.SortOp
         }
 
     }
+
     private fun setupFavouriteObserver() {
         favouriteViewModel.getMessageObserver.observe(viewLifecycleOwner) {
             mIMainActivity?.showMessage(it)
@@ -98,17 +101,14 @@ class SearchFragment : Fragment(), PostsAdapter.IPost, SortDialogFragment.SortOp
 
         }
         postViewModel.getPostsObserver.observe(viewLifecycleOwner) {
-            if(it.isEmpty()){
-                binding.emptyFile.root.visibility =  View.VISIBLE
-                binding.rvPosts.visibility =  View.GONE
-            }else{
-                binding.emptyFile.root.visibility =  View.GONE
-                binding.rvPosts.visibility =  View.VISIBLE
+            if (it.isEmpty()) {
+                binding.emptyFile.root.visibility = View.VISIBLE
+                binding.rvPosts.visibility = View.GONE
+            } else {
+                binding.emptyFile.root.visibility = View.GONE
+                binding.rvPosts.visibility = View.VISIBLE
                 mPostAdapter?.setData(it)
             }
-
-
-
 
 
         }
@@ -158,9 +158,6 @@ class SearchFragment : Fragment(), PostsAdapter.IPost, SortDialogFragment.SortOp
     }
 
 
-
-
-
     override fun onItemClick(post: Post) {
         val direction = NavGraphDirections.actionGlobalNavPostDetailFragment(post.id)
         findNavController().navigate(direction)
@@ -183,6 +180,10 @@ class SearchFragment : Fragment(), PostsAdapter.IPost, SortDialogFragment.SortOp
         }
     }
 
+    override fun onTradingClick(postId: Long, userId: Int, position: Int) {
+        startActivity(Intent(context, PaymentActivity::class.java))
+    }
+
     override fun onApplyFiledClick(
         minPrice: String,
         maxPrice: String,
@@ -190,7 +191,7 @@ class SearchFragment : Fragment(), PostsAdapter.IPost, SortDialogFragment.SortOp
         distance: String,
     ) {
         postViewModel.getFilteredPosts(
-            mIMainActivity?.getPreference()?.getStringValue(PrefKeys.KEY_USER_TOKEN)?: "",
+            mIMainActivity?.getPreference()?.getStringValue(PrefKeys.KEY_USER_TOKEN) ?: "",
             navArgs.categoryId.toString(),
             mIMainActivity?.getPreference()?.getStringValue(PreferenceKeys.KEY_SORT_BY) ?: "",
             minPrice,

@@ -1,17 +1,10 @@
 <resources>
     <string name="app_name">JustFriends</string>
-    <!--TODO : Facebook App ids-->
-    <string name="facebook_app_id">371467151303685</string>
-    <string name="fb_login_protocol_scheme">fb371467151303685</string>
-    <!--TODO : KAKO api key-->
-    <string name="kakao_native_app_key">e3dd44d2fa861ec22f35ff991f3c5189</string>
-
-    <!--TODO: Google api key-->
-    <string name="server_client_id">12215418324-006hfcgmbcvafi3hedhdeo3dg4cv0lel.apps.googleusercontent.com</string>
-
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="facebook_app_id">581486373407490</string>
+    <string name="fb_login_protocol_scheme">fb581486373407490</string>
+    <string name="kakao_native_app_key">106ad0cc7f0298007c10b2c1e3ada510</string>
+    <string name="server_client_id">243352145946-gaqukku05b2eq193u706p9rctmlkih4n.apps.googleusercontent.com</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
     <string name="used_goods_trading_shop_that_can_donate">Used goods trading shop that can donate</string>
     <string name="a_sale_can_soon_become_n_a_donation">A sale can soon become\n a donation.</string>
     <string name="choose_where_you_want_to_donate">Choose where you want to donate</string>
@@ -28,14 +21,14 @@
     <string name="create_an_account">Create an account</string>
     <string name="demo">Android is a Software stack</string>
     <string name="log_in_with_your_email">Log in with your email</string>
-    <string name="youremail">YourEmail</string>
+    <string name="youremail">Your Email</string>
     <string name="forgot_your_password">Forgot your Password?</string>
     <string name="your_password">Your Password</string>
     <string name="login_to_my_account">Login to my Account</string>
     <string name="kakao">Kakao</string>
     <string name="google">Google</string>
     <string name="facebook">Facebook</string>
-    <string name="don_t_have_an_account_signup">Don\'t have an account? Signup</string>
+    <string name="don_t_have_an_account_signup">계정이 없으신가요? 가입하기</string>
     <string name="privacy_policy">By registering you agree to our terms and\n conditions as well as our privacy policy</string>
     <string name="forgot_password">Forgot Password</string>
     <string name="enter_email">Email to receive your password\nPlease enter your address.</string>
@@ -65,7 +58,6 @@
     <string name="zero">0</string>
     <string name="cameraPermissionReason">Without this permission the app is unable to access device camera.We require this permission to capture photo using device camera. Are you sure you want to deny this permission?</string>
     <string name="galleryPermissionReason">Without this permission the app is unable to access device local storage.We require this permission to pick photo from gallery. Are you sure you want to deny this permission?</string>
-
     <string name="_10_miles">10 Miles</string>
     <string name="apply_filters">Apply Filters</string>
     <string name="newest">Newest</string>
@@ -147,7 +139,6 @@
     <string name="message_enter_password">Please enter your password</string>
     <string name="message_enter_phone">Please enter your phone number</string>
     <string name="message_valid_phone">Please enter a valid phone number</string>
-
     <string name="cancel">Cancel</string>
     <string name="logout">LOGOUT</string>
     <string name="okay">Okay</string>
@@ -160,9 +151,9 @@
     <string name="personal">Personal</string>
     <string name="account">Account</string>
     <string name="listings">Listings</string>
-    <string name="dialog_filter">add_photo_dialog_fragment</string>
-    <string name="dialog_sort">add_sort_dialog_fragment</string>
-    <string name="j">j</string>
+    <string name="dialog_filter" translatable="false">add_photo_dialog_fragment</string>
+    <string name="dialog_sort" translatable="false">add_sort_dialog_fragment</string>
+    <string name="j" translatable="false">j</string>
     <string name="please_choose_an_image">Please choose an image</string>
     <string name="permissions_denied">Permissions Denied</string>
     <string name="message_internet_connection">Please check your internet connection</string>
@@ -176,14 +167,13 @@
     <string name="unable_to_detect_camera">Unable to detect camera</string>
     <string name="message_kakao_not_installed">Kakao Navi app is not installed. Recommend using navigation on web version of Kakao Navi.</string>
     <string name="possible_use_map">Possible to use navigation on Kakao Navi app.</string>
-    <string name="x_value">127.108640</string>
-    <string name="y_value">37.402111</string>
-    <string name="x_values">127.111492</string>
-    <string name="y_values">37.395225</string>
+    <string name="x_value" translatable="false">127.108640</string>
+    <string name="y_value" translatable="false">37.402111</string>
+    <string name="x_values" translatable="false">127.111492</string>
+    <string name="y_values" translatable="false">37.395225</string>
     <string name="maximum_limit_reached">Maximum limit reached</string>
     <string name="enable">Enable</string>
     <string name="messageAllowLocation">"Your device location is disable.You need location to post an item.  "</string>
-
     <string name="message_upload_image">Please upload product image</string>
     <string name="message_select_category">Please select a category</string>
     <string name="message_product_title">Please enter a product title.</string>
@@ -204,11 +194,11 @@
     <string name="mark_as_sold">Mark as sold</string>
     <string name="terms">must read terms and conditions</string>
     <string name="car">Car</string>
-    <string name="one_charity_value">1</string>
-    <string name="zero_charity_value">0</string>
+    <string name="one_charity_value" translatable="false">1</string>
+    <string name="zero_charity_value" translatable="false">0</string>
     <string name="message_password_same">Password should be same</string>
     <string name="message_valid_email">enter a valid email</string>
-    <string name="time">%s</string>
+    <string name="time" translatable="false">%s</string>
     <string name="message_enter_old_password">Please enter old password</string>
     <string name="message_enter_new_password">Please enter new password</string>
     <string name="message_password_changed">Password has changed successfully.</string>
@@ -218,7 +208,7 @@
     <string name="report_user">Report User</string>
     <string name="inappropriate_profile_picture">Inappropriate profile picture</string>
     <string name="this_user_is_threatening_me">This user is threatening me</string>
-    <string name="this_user_id_insulting_me">This user id insulting me</string>
+    <string name="this_user_id_insulting_me">This user is insulting me</string>
     <string name="spam">Spam</string>
     <string name="fraud">Fraud</string>
     <string name="other">other</string>
@@ -229,7 +219,7 @@
     <string name="message_comment_required">Comment required</string>
     <string name="message_search_keyword_required">Search keyword required</string>
     <string name="select_condition">Select Condition</string>
-    <string name="space" />
+    <string name="space" translatable="false" />
     <string name="message_minimum_value">Your minimum price should less than maximum price</string>
     <string name="edit_name">Edit Name</string>
     <string name="enter_name">Enter name</string>
@@ -246,7 +236,7 @@
     <string name="message_permission_denied">Permission Denied</string>
     <string name="CreateYourAccount">Create your account</string>
     <string name="messageAlreadyHaveAccount">Already have an account? Log in</string>
-    <string name="supportFoundationName">Support %s</string>
+    <string name="supportFoundationName">기부처 %s</string>
     <string name="writeYourReview">Write your review</string>
     <string name="seeFullReviews">See Full Review\'s</string>
     <string name="allReviews">All Reviews</string>
@@ -254,6 +244,19 @@
     <string name="messagePleaseAddAComment">Please provide a comment.</string>
     <string name="alert">Alert</string>
     <string name="messageSureDeleteReview">Are you sure you want to delete this review?</string>
-
-
+    <string name="confirm_email">Please Confirm Your Kakao Email or ID</string>
+    <string name="confirm">Confirm</string>
+    <string name="automotive">Automotive</string>
+    <string name="condition_value">Best</string>
+    <string name="won">1200 won</string>
+    <string name="enter_your_shipping_address">Enter Your Shipping Address</string>
+    <string name="house_number">House Number</string>
+    <string name="address_name">Address Name</string>
+    <string name="address">Address</string>
+    <string name="all_field">Please Enter all Field</string>
+    <string name="area">Area</string>
+    <string name="zipcode">Zip Code</string>
+    <string name="city">City</string>
+    <string name="state">State</string>
+    <string name="continues">Continue</string>
 </resources>

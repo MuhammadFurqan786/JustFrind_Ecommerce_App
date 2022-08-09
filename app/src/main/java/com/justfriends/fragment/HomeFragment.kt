@@ -2,6 +2,7 @@ package com.justfriends.fragment
 
 import android.Manifest
 import android.content.Context
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.util.Log
@@ -14,19 +15,29 @@ import androidx.navigation.fragment.findNavController
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
+import com.iamport.sampleapp.ui.PaymentActivity
+import com.justfriends.MyFirebaseMessagingService
 import com.justfriends.NavGraphDirections
+import com.justfriends.R
 import com.justfriends.adapter.HomeCategoriesAdapter
 import com.justfriends.adapter.PostsAdapter
 import com.justfriends.databinding.FragmentHomeBinding
 import com.justfriends.interfaces.IMainActivity
-import com.justfriends.viewModel.FavouriteViewModel
-import com.justfriends.viewModel.PostViewModel
-
-import com.justfriends.R
 import com.justfriends.model.Post
+import com.justfriends.preference.PreferenceHelper
 import com.justfriends.utils.Global
 import com.justfriends.utils.PrefKeys
 import com.justfriends.viewModel.CategoryViewModel
+import com.justfriends.viewModel.FavouriteViewModel
+import com.justfriends.viewModel.PostViewModel
+import com.kakao.sdk.common.util.Utility
+import com.kakao.sdk.navi.Constants.USER_ID
+import com.sendbird.android.GroupChannel
+import com.sendbird.android.GroupChannelParams
+import com.sendbird.android.SendBird
+import com.sendbird.android.SendBirdPushHelper
+import java.util.ArrayList
+
 
 private const val RC_PERMISSIONS = 101
 
@@ -39,22 +50,46 @@ class HomeFragment : Fragment(), HomeCategoriesAdapter.ICategoryClick,
     private val postViewModel: PostViewModel by viewModels()
     private val categoryViewModel: CategoryViewModel by viewModels()
     private var mIMainActivity: IMainActivity? = null
+    private lateinit var selectedUsers: ArrayList<String>
     private val favouriteViewModel: FavouriteViewModel by viewModels()
     private var categoryID = ""
     private val permissions = arrayOf(
         Manifest.permission.ACCESS_FINE_LOCATION
     )
+    private lateinit var helper: PreferenceHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mIMainActivity?.getPreference()?.setUserLogin(true)
         activity?.window?.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_NOTHING)
         mPostsAdapter = PostsAdapter()
+        selectedUsers = ArrayList()
         mHomeCategoryAdapter = HomeCategoriesAdapter()
         mPostsAdapter?.setOnPostClickListener(this)
         mHomeCategoryAdapter?.setOnCategoryClickListener(this)
+        helper = PreferenceHelper.getPref(requireContext())
+
+
     }
 
+
+    private fun connectToSendBird(userID: String, nickname: String) {
+        SendBird.connect(userID) { user, e ->
+            if (e != null) {
+                mIMainActivity?.showMessage(e.message.toString())
+            } else {
+                SendBird.updateCurrentUserInfo(nickname, null) { e ->
+                    if (e != null) {
+                        mIMainActivity?.showMessage(e.message.toString())
+                    }
+                }
+            }
+        }
+
+        SendBird.connect(userID, SendBird.ConnectHandler { user, sendBirdException ->
+        })
+        SendBirdPushHelper.registerPushHandler(MyFirebaseMessagingService())
+    }
 
 
     override fun onCreateView(
@@ -62,39 +97,49 @@ class HomeFragment : Fragment(), HomeCategoriesAdapter.ICategoryClick,
         savedInstanceState: Bundle?,
     ): View {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
+
         return binding.root
     }
 
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        Global.hideKeyboard(requireContext(),binding.root)
+        Global.hideKeyboard(requireContext(), binding.root)
         checkForPermission()
         binding.rvHomeCategories.setHasFixedSize(true)
         binding.rvHomePost.setHasFixedSize(true)
         binding.rvHomeCategories.adapter = mHomeCategoryAdapter
         binding.rvHomePost.adapter = mPostsAdapter
         categoryViewModel.getCategories()
+
         postViewModel.getRecentPosts(
             mIMainActivity?.getPreference()?.getStringValue(PrefKeys.KEY_USER_TOKEN) ?: ""
         )
-
+        Log.d(
+            "TOKEN",
+            mIMainActivity?.getPreference()?.getStringValue(PrefKeys.KEY_USER_TOKEN) ?: ""
+        )
         setupCategoryObserver()
         setupPostObserver()
         setupFavouriteObserver()
         setUpListener()
+
+        connectToSendBird(
+            helper.getCurrentUser()?.id.toString(),
+            helper.getCurrentUser()?.name.toString()
+        )
+        loadUsers()
     }
+
     private fun setupCategoryObserver() {
-        categoryViewModel.getProgressObserver.observe(viewLifecycleOwner){
+        categoryViewModel.getProgressObserver.observe(viewLifecycleOwner) {
             mIMainActivity?.showProgress(it)
         }
-        categoryViewModel.getMessageObserver.observe(viewLifecycleOwner){
+        categoryViewModel.getMessageObserver.observe(viewLifecycleOwner) {
             mIMainActivity?.showMessage(it)
         }
-        categoryViewModel.getCategoryObserver.observe(viewLifecycleOwner){
+        categoryViewModel.getCategoryObserver.observe(viewLifecycleOwner) {
             mHomeCategoryAdapter?.setData(it)
-
 
 
         }
@@ -107,12 +152,10 @@ class HomeFragment : Fragment(), HomeCategoriesAdapter.ICategoryClick,
         postViewModel.getMessageObserver.observe(viewLifecycleOwner) {
             mIMainActivity?.showMessage(it)
         }
-        postViewModel.getPostsObserver.observe(viewLifecycleOwner){
+        postViewModel.getPostsObserver.observe(viewLifecycleOwner) {
             mPostsAdapter?.setData(it)
         }
     }
-
-
 
 
     private fun setupFavouriteObserver() {
@@ -202,16 +245,13 @@ class HomeFragment : Fragment(), HomeCategoriesAdapter.ICategoryClick,
     }
 
 
-
-
-
-
     private fun setUpListener() {
         binding.etSearch.setOnClickListener {
             val direction = HomeFragmentDirections.actionNavHomeFragmentToNavSearchFragment(
                 0,
                 "",
-                true)
+                true
+            )
             findNavController().navigate(direction)
         }
 
@@ -252,7 +292,8 @@ class HomeFragment : Fragment(), HomeCategoriesAdapter.ICategoryClick,
         val direction = HomeFragmentDirections.actionNavHomeFragmentToNavSearchFragment(
             categoryId,
             "",
-            false)
+            false
+        )
         findNavController().navigate(direction)
     }
 
@@ -283,7 +324,47 @@ class HomeFragment : Fragment(), HomeCategoriesAdapter.ICategoryClick,
             )
         }
     }
+    private fun loadUsers() {
+        val userListQuery = SendBird.createApplicationUserListQuery()
 
+        userListQuery.next() { list, e ->
+            if (e != null) {
+                e.message?.let { Log.e("TAG", it) }
+            } else {
+                Log.d("TAG", list.toString())
+            }
+        }
+    }
+
+
+    override fun onTradingClick(postId: Long, postUserId: Int, position: Int) {
+        mClickedPosition = position
+        selectedUsers.add(postUserId.toString())
+        createChannel(selectedUsers)
+    }
+
+    private fun createChannel(users: MutableList<String>) {
+        val params = GroupChannelParams()
+
+
+        val operatorId = ArrayList<String>()
+        operatorId.add(SendBird.getCurrentUser().userId)
+
+        params.addUserIds(users)
+        params.setOperatorUserIds(operatorId)
+
+        GroupChannel.createChannel(params) { groupChannel, e ->
+            if (e != null) {
+                e.message?.let { Log.e("TAG", it) }
+            } else {
+                val directions =
+                    HomeFragmentDirections.actionNavHomeFragmentToChatFragment(
+                        groupChannel.url
+                    )
+                findNavController().navigate(directions)
+            }
+        }
+    }
 
     override fun onAttach(context: Context) {
         super.onAttach(context)

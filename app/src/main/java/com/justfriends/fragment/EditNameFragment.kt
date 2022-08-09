@@ -17,6 +17,7 @@ import com.justfriends.databinding.FragmentMyAccountBinding
 import com.justfriends.interfaces.IMainActivity
 import com.justfriends.preference.PreferenceHelper
 import com.justfriends.preference.PreferenceKeys
+import com.justfriends.utils.PrefKeys
 import com.justfriends.viewModel.AuthViewModel
 
 
@@ -70,7 +71,7 @@ class EditNameFragment : Fragment() {
         }
         binding.btSaveName.setOnClickListener {
             val name = binding.etName.text.toString().trim()
-            authViewModel.updateName(helper?.getStringValue(PreferenceKeys.KEY_USER_TOKEN) ?: "", name)
+            authViewModel.updateName(helper?.getStringValue(PrefKeys.KEY_USER_TOKEN) ?: "", name)
         }
     }
 

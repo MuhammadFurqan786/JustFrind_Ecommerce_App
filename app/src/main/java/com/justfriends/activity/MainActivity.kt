@@ -1,31 +1,49 @@
 package com.justfriends.activity
 
 import android.content.Context
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.inputmethod.InputMethodManager
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
+import com.justfriends.MyFirebaseMessagingService
 import com.justfriends.R
 import com.justfriends.databinding.ActivityMainBinding
+import com.justfriends.fragment.AddPostFragment
 import com.justfriends.interfaces.IMainActivity
 import com.justfriends.preference.PreferenceHelper
 import com.justfriends.utils.Global
+import com.sendbird.android.SendBird
+import com.sendbird.android.SendBirdPushHelper
+
 
 class MainActivity : AppCompatActivity(), IMainActivity {
 
     private lateinit var binding: ActivityMainBinding
     private var navController: NavController? = null
     private lateinit var helper: PreferenceHelper
+    private lateinit var fragment: AddPostFragment
+    private val SIMPLE_FRAGMENT_TAG = "myfragmenttag"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
+
+
         setContentView(binding.root)
+
+        if (savedInstanceState != null) { // saved instance state, fragment may exist
+            // look up the instance that already exists by tag
+            fragment =
+                supportFragmentManager.findFragmentByTag(SIMPLE_FRAGMENT_TAG) as AddPostFragment
+        }
+
+        SendBird.init("4DE366EB-4DE6-4C42-9915-3C0AE29BF89D", this)
+        SendBirdPushHelper.registerPushHandler(MyFirebaseMessagingService())
         helper = PreferenceHelper.getPref(this)
         //  binding.bottomNavBar.background = null
         binding.bottomNavBar.menu.getItem(2).isEnabled = false
@@ -35,7 +53,8 @@ class MainActivity : AppCompatActivity(), IMainActivity {
 
 
     private fun setupNavigation() {
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         navController = navHostFragment.navController
         NavigationUI.setupWithNavController(binding.bottomNavBar, navController!!)
         navController!!.addOnDestinationChangedListener { controller, destination, arguments ->
@@ -86,7 +105,7 @@ class MainActivity : AppCompatActivity(), IMainActivity {
     override fun showAlter(message: String) {
         MaterialAlertDialogBuilder(this)
             .setMessage(message)
-            .setPositiveButton(getString(R.string.ok)){dialog,which->
+            .setPositiveButton(getString(R.string.ok)) { dialog, which ->
                 dialog.dismiss()
             }.show()
     }

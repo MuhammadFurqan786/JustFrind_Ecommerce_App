@@ -1,15 +1,20 @@
 <component name="libraryTable">
   <library name="Gradle: com.facebook.android:facebook-android-sdk:8.2.0@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/1a77cb4d0bb1f44b8e6b2ef448adbd4d/transformed/jetified-facebook-android-sdk-8.2.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/1a77cb4d0bb1f44b8e6b2ef448adbd4d/transformed/jetified-facebook-android-sdk-8.2.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/1a77cb4d0bb1f44b8e6b2ef448adbd4d/transformed/jetified-facebook-android-sdk-8.2.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/013659799d5d538e9f9ccda08026cb07/transformed/jetified-facebook-android-sdk-8.2.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/013659799d5d538e9f9ccda08026cb07/transformed/jetified-facebook-android-sdk-8.2.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/013659799d5d538e9f9ccda08026cb07/transformed/jetified-facebook-android-sdk-8.2.0/AndroidManifest.xml" />
+      <root url="file://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/013659799d5d538e9f9ccda08026cb07/transformed/jetified-facebook-android-sdk-8.2.0/res" />
+      <root url="file://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/0642c9f242c7398c2f775a5a786d0cb4/transformed/jetified-facebook-android-sdk-8.2.0/res" />
+      <root url="file://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/da919f1df4543ce1e57e536e92d1b1d1/transformed/jetified-facebook-android-sdk-8.2.0/AndroidManifest.xml" />
+      <root url="file://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/da919f1df4543ce1e57e536e92d1b1d1/transformed/jetified-facebook-android-sdk-8.2.0/res" />
+      <root url="jar://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/da919f1df4543ce1e57e536e92d1b1d1/transformed/jetified-facebook-android-sdk-8.2.0/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.facebook.android/facebook-android-sdk/8.2.0/ce4b8d4f22ecc656dd82bbf3e2cbb3ac4ec51056/facebook-android-sdk-8.2.0-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/modules-2/files-2.1/com.facebook.android/facebook-android-sdk/8.2.0/ce4b8d4f22ecc656dd82bbf3e2cbb3ac4ec51056/facebook-android-sdk-8.2.0-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.facebook.android/facebook-android-sdk/8.2.0/262f6b585e3be488b980feed0a0b9eb351ef72bd/facebook-android-sdk-8.2.0-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/modules-2/files-2.1/com.facebook.android/facebook-android-sdk/8.2.0/262f6b585e3be488b980feed0a0b9eb351ef72bd/facebook-android-sdk-8.2.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

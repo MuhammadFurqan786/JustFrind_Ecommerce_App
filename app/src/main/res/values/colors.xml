@@ -14,7 +14,7 @@
     <color name="color_yellow">#FFE812</color>
     <color name="color_fb_blue">#4B6EA9</color>
     <color name="color_google_red">#E66249</color>
-    <color name="color_primary_text">#000000</color>
+    <color name="color_primary_text">#989898</color>
     <color name="color_dark_red">#A00000</color>
     <color name="color_light_grey">#EFEFEF</color>
     <color name="color_light_text_gray">#C5C5C5</color>
@@ -24,7 +24,7 @@
     <color name="color_text_red">#FF0000</color>
     <color name="color_bg_red">#FFBFBF</color>
     <color name="color_text_secondary">#DBD2F1</color>
-    <color name="color_bg_sold">#9A9A9A</color>
+    <color name="color_bg_sold">#ccc</color>
     <color name="color_grey_text">#C5C5C5</color>
     <color name="color_bt_bg">#53447C</color>
 </resources>

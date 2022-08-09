@@ -1,15 +1,20 @@
 <component name="libraryTable">
   <library name="Gradle: com.facebook.android:facebook-core:8.2.0@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/ac1c4d1b7edaada426072ee8188a046a/transformed/jetified-facebook-core-8.2.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/ac1c4d1b7edaada426072ee8188a046a/transformed/jetified-facebook-core-8.2.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/ac1c4d1b7edaada426072ee8188a046a/transformed/jetified-facebook-core-8.2.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/0475acd3fda1df9c0fc00f0c303f0a42/transformed/jetified-facebook-core-8.2.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/0475acd3fda1df9c0fc00f0c303f0a42/transformed/jetified-facebook-core-8.2.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/0475acd3fda1df9c0fc00f0c303f0a42/transformed/jetified-facebook-core-8.2.0/AndroidManifest.xml" />
+      <root url="file://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/0475acd3fda1df9c0fc00f0c303f0a42/transformed/jetified-facebook-core-8.2.0/res" />
+      <root url="file://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/3d3aae003e32c7f524ef5ae5773d8cd3/transformed/jetified-facebook-core-8.2.0/res" />
+      <root url="jar://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/b7cff1fe75908210d9c92cbf7e70074c/transformed/jetified-facebook-core-8.2.0/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/b7cff1fe75908210d9c92cbf7e70074c/transformed/jetified-facebook-core-8.2.0/res" />
+      <root url="file://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/b7cff1fe75908210d9c92cbf7e70074c/transformed/jetified-facebook-core-8.2.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.facebook.android/facebook-core/8.2.0/485eebdf704bea75ca6ad75b42ecb5487e1d6b72/facebook-core-8.2.0-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/modules-2/files-2.1/com.facebook.android/facebook-core/8.2.0/485eebdf704bea75ca6ad75b42ecb5487e1d6b72/facebook-core-8.2.0-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.facebook.android/facebook-core/8.2.0/817b834209be46fb5c18127dcb2605ed3e14280d/facebook-core-8.2.0-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/modules-2/files-2.1/com.facebook.android/facebook-core/8.2.0/817b834209be46fb5c18127dcb2605ed3e14280d/facebook-core-8.2.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

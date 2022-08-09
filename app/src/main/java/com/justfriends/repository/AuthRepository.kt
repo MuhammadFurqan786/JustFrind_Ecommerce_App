@@ -6,6 +6,7 @@ import com.justfriends.model.*
 import com.justfriends.network.RetrofitService
 import okhttp3.MultipartBody
 
+
 class AuthRepository(private val apiService: RetrofitService) : BaseRepository() {
 
     suspend fun signUp(
@@ -200,6 +201,7 @@ class AuthRepository(private val apiService: RetrofitService) : BaseRepository()
         }
     }
 
+
     suspend fun updateName(
         token: String,
         name: String,
@@ -254,6 +256,7 @@ class AuthRepository(private val apiService: RetrofitService) : BaseRepository()
             null
         }
     }
+
 
 
 }

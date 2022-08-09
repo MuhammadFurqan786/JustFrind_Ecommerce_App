@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.android.gms:play-services-measurement:21.0.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/bc6ee800e76986609704eda4f7bd389d/transformed/jetified-play-services-measurement-21.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/bc6ee800e76986609704eda4f7bd389d/transformed/jetified-play-services-measurement-21.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/bc6ee800e76986609704eda4f7bd389d/transformed/jetified-play-services-measurement-21.0.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/5d23f5f3d8ba09e7f2613870eec26de0/transformed/jetified-play-services-measurement-21.0.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/5d23f5f3d8ba09e7f2613870eec26de0/transformed/jetified-play-services-measurement-21.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/5d23f5f3d8ba09e7f2613870eec26de0/transformed/jetified-play-services-measurement-21.0.0/AndroidManifest.xml" />
+      <root url="file://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/5d23f5f3d8ba09e7f2613870eec26de0/transformed/jetified-play-services-measurement-21.0.0/res" />
+      <root url="file://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/3820a249383ebf116704e70418df81c3/transformed/jetified-play-services-measurement-21.0.0/res" />
+      <root url="file://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/e29288e87f4502844fd574dd11a110a7/transformed/jetified-play-services-measurement-21.0.0/res" />
+      <root url="jar://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/e29288e87f4502844fd574dd11a110a7/transformed/jetified-play-services-measurement-21.0.0/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/e29288e87f4502844fd574dd11a110a7/transformed/jetified-play-services-measurement-21.0.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/modules-2/files-2.1/com.google.android.gms/play-services-measurement/21.0.0/13889bb17d112cbd1ce0d85dc0c51aaa030cc16c/play-services-measurement-21.0.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>

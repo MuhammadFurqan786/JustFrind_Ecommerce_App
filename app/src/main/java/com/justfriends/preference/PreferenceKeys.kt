@@ -14,6 +14,6 @@ class PreferenceKeys {
         const val KEY_CONDITION ="key_condition"
 
         const val  KEY_SORT_BY ="key_sort_by"
-        const val  KEY_USER_TOKEN ="key_user_token"
+        const val KEY_LOCATION = "106ad0cc7f0298007c10b2c1e3ada510"
     }
 }

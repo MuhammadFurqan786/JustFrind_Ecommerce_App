@@ -1,6 +1,8 @@
 package com.justfriends.fragment
 
+import android.annotation.SuppressLint
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -20,10 +22,14 @@ import com.justfriends.adapterClasses.MyTabSelectedListener
 import com.justfriends.databinding.FragmentPostDetailBinding
 import com.justfriends.interfaces.IMainActivity
 import com.justfriends.model.PostDetailData
+import com.justfriends.preference.PreferenceHelper
 import com.justfriends.utils.Global
 import com.justfriends.utils.PrefKeys
 import com.justfriends.viewModel.FavouriteViewModel
 import com.justfriends.viewModel.PostViewModel
+import com.sendbird.android.GroupChannel
+import com.sendbird.android.GroupChannelParams
+import com.sendbird.android.SendBird
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -37,7 +43,14 @@ class PostDetailFragment : Fragment(), ImageSlidesShowAdapter.IImageClick {
     private val favouriteViewModel: FavouriteViewModel by viewModels()
     private var isFav = false
     private var postDetailData: PostDetailData? = null
+    private lateinit var selectedUsers: ArrayList<String>
+    private lateinit var helper: PreferenceHelper
 
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        helper = PreferenceHelper.getPref(requireContext())
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -49,13 +62,26 @@ class PostDetailFragment : Fragment(), ImageSlidesShowAdapter.IImageClick {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        selectedUsers = ArrayList()
         getPostDetail()
-
+        loadUsers()
         setupObserver()
         setupListener()
         setupTabChangeListener()
+
     }
 
+    private fun loadUsers() {
+        val userListQuery = SendBird.createApplicationUserListQuery()
+
+        userListQuery.next() { list, e ->
+            if (e != null) {
+                e.message?.let { Log.e("TAG", it) }
+            } else {
+                Log.d("TAG", list.toString())
+            }
+        }
+    }
 
     private fun getPostDetail() {
         postViewModel.getPostDetail(
@@ -80,6 +106,7 @@ class PostDetailFragment : Fragment(), ImageSlidesShowAdapter.IImageClick {
 
     }
 
+    @SuppressLint("SetTextI18n")
     private fun setData(post: PostDetailData) {
         postDetailData = post
         binding.tvProductName.text = post.name
@@ -87,14 +114,18 @@ class PostDetailFragment : Fragment(), ImageSlidesShowAdapter.IImageClick {
         setupImageSlides(post.imgs.toTypedArray())
         isFav = post.isFav == 1
 
+        binding.tvDonationDescription.text =
+            "We donate " + post.charityAmt + " of the product amount to the charity"
+
         binding.ivFav.setImageResource(
             if (post.isFav == 1)
                 R.drawable.ic_like
             else R.drawable.ic_like_normal
         )
 
-        binding.gpBtChatBuy.visibility = if (post.userId == mIMainActivity?.getPreference()?.getCurrentUser()?.id
-        ) View.VISIBLE else View.GONE
+        binding.gpBtChatBuy.visibility =
+            if (post.userId == mIMainActivity?.getPreference()?.getCurrentUser()?.id
+            ) View.GONE else View.VISIBLE
 
 
         val price =
@@ -108,7 +139,7 @@ class PostDetailFragment : Fragment(), ImageSlidesShowAdapter.IImageClick {
             )
         )
         binding.tvSellerName.text = post.userName ?: ""
-        binding.tvCondition.text=post.productCondition
+        binding.tvCondition.text = post.productCondition
 
 
         Glide.with(requireContext())
@@ -117,7 +148,7 @@ class PostDetailFragment : Fragment(), ImageSlidesShowAdapter.IImageClick {
             .error(R.drawable.ic_empty_photo)
             .into(binding.ivSeller)
 
-
+        selectedUsers.add(postDetailData?.userId.toString())
     }
 
     private fun setupListener() {
@@ -152,7 +183,50 @@ class PostDetailFragment : Fragment(), ImageSlidesShowAdapter.IImageClick {
 
         }
 
+        binding.btChat.setOnClickListener {
 
+            createChannel(selectedUsers)
+
+        }
+
+        binding.ivShare.setOnClickListener {
+            sharePost()
+        }
+
+        binding.btBuy.setOnClickListener {
+//            var orderId = postDetailData?.id.toString()
+//
+//            var productAmount = postDetailData?.price.toString()
+//            var customerName = helper.getCurrentUser()?.name.toString()
+//
+//            if (orderId.isEmpty() || productAmount.isEmpty() || productName.isEmpty()
+//                || customerName.isEmpty()
+//            ) {
+//                Log.d("TAG", "Something is empty")
+//            } else {
+//                val link =
+//                    "https://www.inicis.com/service-application-mo/api/user/payment?+order_id=$orderId&product_name=$productName&customer_name=$customerName&amount=$productAmount"
+//                val intent = Intent(Intent.ACTION_VIEW)
+//                intent.data = Uri.parse(link)
+//                startActivity(intent)
+
+            val directions =
+                PostDetailFragmentDirections.actionNavPostDetailFragmentToShippingFragment()
+            findNavController().navigate(directions)
+
+        }
+
+    }
+
+    private fun sharePost() {
+        var productName = postDetailData?.name.toString()
+        val sharingIntent = Intent(android.content.Intent.ACTION_SEND)
+        sharingIntent.type = "text/plain"
+        val shareBody =
+            "Application Link : https://play.google.com/store/apps/details?id=${context?.packageName}"
+        sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "App link")
+        sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody)
+        startActivity(Intent.createChooser(sharingIntent, "Share App Link Via :"))
     }
 
     private fun setupTabChangeListener() {
@@ -162,8 +236,6 @@ class PostDetailFragment : Fragment(), ImageSlidesShowAdapter.IImageClick {
                     if (tab?.position == 0) View.VISIBLE else View.GONE
                 binding.tvPostDescription.visibility =
                     if (tab?.position == 1) View.VISIBLE else View.GONE
-
-
             }
         })
     }
@@ -192,5 +264,27 @@ class PostDetailFragment : Fragment(), ImageSlidesShowAdapter.IImageClick {
         findNavController().navigate(direction)
     }
 
+    private fun createChannel(users: MutableList<String>) {
+        val params = GroupChannelParams()
+
+
+        val operatorId = ArrayList<String>()
+        operatorId.add(SendBird.getCurrentUser().userId)
+
+        params.addUserIds(users)
+        params.setOperatorUserIds(operatorId)
+
+        GroupChannel.createChannel(params) { groupChannel, e ->
+            if (e != null) {
+                e.message?.let { Log.e("TAG", it) }
+            } else {
+                val directions =
+                    PostDetailFragmentDirections.actionNavPostDetailFragmentToChatFragment(
+                        groupChannel.url
+                    )
+                findNavController().navigate(directions)
+            }
+        }
+    }
 
 }

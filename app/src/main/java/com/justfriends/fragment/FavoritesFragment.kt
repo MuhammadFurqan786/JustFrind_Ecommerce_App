@@ -13,6 +13,7 @@ import com.justfriends.interfaces.IMainActivity
 import com.justfriends.model.FavouriteItem
 import com.justfriends.preference.PreferenceHelper
 import com.justfriends.preference.PreferenceKeys
+import com.justfriends.utils.PrefKeys
 import com.justfriends.viewModel.FavouriteViewModel
 
 
@@ -31,14 +32,14 @@ class FavoritesFragment : Fragment(), FavoritesAdapter.FavItemClickInterFace {
     ): View? {
         binding = FragmentFavoritesBinding.inflate(inflater, container, false)
         helper = PreferenceHelper.getPref(requireContext())
-        val auth=PreferenceHelper.getPref(requireContext()).getStringValue(PreferenceKeys.KEY_USER_TOKEN)
+        val auth=PreferenceHelper.getPref(requireContext()).getStringValue(PrefKeys.KEY_USER_TOKEN)
 
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        favouriteViewModel.getFavouritePosts(helper.getStringValue(PreferenceKeys.KEY_USER_TOKEN) ?: "")
+        favouriteViewModel.getFavouritePosts(helper.getStringValue(PrefKeys.KEY_USER_TOKEN) ?: "")
         setUpObserver()
     }
 

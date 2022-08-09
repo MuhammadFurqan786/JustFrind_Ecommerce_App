@@ -7,7 +7,6 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.database.Cursor
 import android.graphics.Bitmap
-import android.graphics.BitmapFactory
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.location.Address
@@ -17,7 +16,6 @@ import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.net.Uri
 import android.os.Build
-import android.os.Environment.DIRECTORY_DCIM
 import android.os.Environment.DIRECTORY_PICTURES
 import android.provider.MediaStore
 import android.provider.Settings
@@ -41,13 +39,14 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 import com.justfriends.R
 import com.justfriends.network.ApiFactory
+import com.sendbird.android.constant.StringSet.file
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.asRequestBody
 import java.io.File
-import java.io.FileInputStream
 import java.io.FileOutputStream
 import java.io.IOException
+import java.io.OutputStream
 import java.text.ParseException
 import java.text.SimpleDateFormat
 import java.util.*
@@ -243,53 +242,68 @@ object Global {
         )
     }
 
-    fun prepareFilePart(partName: String, filePath: String): MultipartBody.Part {
-        val file = File(filePath)
+    fun prepareFilePart(mContext: Context, partName: String, bitmap: Bitmap): MultipartBody.Part {
 
-        val requestBody =
-            saveBitmapToFile(file).asRequestBody("multipart/form-data".toMediaTypeOrNull())
-        return MultipartBody.Part.createFormData(partName, file.name, requestBody)
+        val file = persistImage(mContext,bitmap,bitmap.toString())
+
+        val requestBody = file?.asRequestBody("multipart/form-data".toMediaTypeOrNull())
+        return MultipartBody.Part.createFormData(partName,file?.name, requestBody!!)
 
     }
 
-    private fun saveBitmapToFile(file: File): File {
-        return try {
-
-            // BitmapFactory options to downsize the image
-            val o = BitmapFactory.Options()
-            o.inJustDecodeBounds = true
-            o.inSampleSize = 6
-            // factor of downsizing the image
-            var inputStream = FileInputStream(file)
-            //Bitmap selectedBitmap = null;
-            BitmapFactory.decodeStream(inputStream, null, o)
-            inputStream.close()
-
-            // The new size we want to scale to
-            val REQUIRED_SIZE = 75
-
-            // Find the correct scale value. It should be the power of 2.
-            var scale = 1
-            while (o.outWidth / scale / 2 >= REQUIRED_SIZE &&
-                o.outHeight / scale / 2 >= REQUIRED_SIZE
-            ) {
-                scale *= 2
-            }
-            val o2 = BitmapFactory.Options()
-            o2.inSampleSize = scale
-            inputStream = FileInputStream(file)
-            val selectedBitmap = BitmapFactory.decodeStream(inputStream, null, o2)
-            inputStream.close()
-
-            // here i override the original image file
-            file.createNewFile()
-            val outputStream = FileOutputStream(file)
-            selectedBitmap!!.compress(Bitmap.CompressFormat.JPEG, 100, outputStream)
-            file
+    fun persistImage(context: Context, bitmap: Bitmap, name: String): File? {
+        val filesDir = context.filesDir
+        val imageFile = File(filesDir, "$name.jpg")
+        val os: OutputStream
+        try {
+            os = FileOutputStream(imageFile)
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, os)
+            os.flush()
+            os.close()
         } catch (e: Exception) {
-            File("")
+            Log.e("context", "Error writing bitmap", e)
         }
+        return imageFile
     }
+
+//    private fun saveBitmapToFile(file: File): File {
+//        return try {
+//
+//            // BitmapFactory options to downsize the image
+//            val o = BitmapFactory.Options()
+//            o.inJustDecodeBounds = true
+//            o.inSampleSize = 6
+//            // factor of downsizing the image
+//            var inputStream = FileInputStream(file)
+//            //Bitmap selectedBitmap = null;
+//            BitmapFactory.decodeStream(inputStream, null, o)
+//            inputStream.close()
+//
+//            // The new size we want to scale to
+//            val REQUIRED_SIZE = 75
+//
+//            // Find the correct scale value. It should be the power of 2.
+//            var scale = 1
+//            while (o.outWidth / scale / 2 >= REQUIRED_SIZE &&
+//                o.outHeight / scale / 2 >= REQUIRED_SIZE
+//            ) {
+//                scale *= 2
+//            }
+//            val o2 = BitmapFactory.Options()
+//            o2.inSampleSize = scale
+//            inputStream = FileInputStream(file)
+//            val selectedBitmap = BitmapFactory.decodeStream(inputStream, null, o2)
+//            inputStream.close()
+//
+//            // here i override the original image file
+//            file.createNewFile()
+//            val outputStream = FileOutputStream(file)
+//            selectedBitmap!!.compress(Bitmap.CompressFormat.JPEG, 100, outputStream)
+//            file
+//        } catch (e: Exception) {
+//            File("")
+//        }
+//    }
 
     fun requiredRational(activity: Activity?, permissions: String?): Boolean {
         return ActivityCompat.shouldShowRequestPermissionRationale(activity!!, permissions!!)

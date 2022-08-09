@@ -2,6 +2,7 @@ package com.justfriends.viewModel
 
 import android.app.Application
 import android.content.Context
+import android.graphics.Bitmap
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -25,13 +26,17 @@ class AddPostViewModel(application: Application) : AndroidViewModel(application)
     private val coroutineContext: CoroutineContext get() = parentJob + Dispatchers.Default
     private val scope = CoroutineScope(coroutineContext)
     private val postImages = ArrayList<String>()
+    private val postImagesBitmap = ArrayList<Bitmap>()
+    private lateinit var mCoverImageBitmap: Bitmap
     private var mCoverImage: String = ""
     private val mUploadPostData = UploadPostModel()
     private val addPostRepo = AddPostRepository(ApiFactory.makeServiceApi())
 
 
     private val liveDataPostImages = MutableLiveData<ArrayList<String>>()
+    private val liveDataPostImagesBitmap = MutableLiveData<ArrayList<Bitmap>>()
     private val liveDataCoverImage = MutableLiveData<String>()
+    private val liveDataCoverImageBitmap = MutableLiveData<Bitmap>()
     private val liveDataProgress = MutableLiveData<Boolean>()
     private val liveDataMessage = MutableLiveData<String>()
     private val liveDataAddPost = SingleLiveEvent<AddPostResModel>()
@@ -54,6 +59,15 @@ class AddPostViewModel(application: Application) : AndroidViewModel(application)
         get() : LiveData<AddPostResModel>
         = liveDataAddPost
 
+    fun addImageBitmap(image:Bitmap){
+        if (postImagesBitmap.isEmpty()) {
+            mCoverImageBitmap = image
+            liveDataCoverImageBitmap.postValue(mCoverImageBitmap)
+        }
+        postImagesBitmap.add(image)
+        liveDataPostImagesBitmap.postValue(postImagesBitmap)
+    }
+
 
     fun addImage(image: String) {
         if (postImages.isEmpty()) {
@@ -69,6 +83,11 @@ class AddPostViewModel(application: Application) : AndroidViewModel(application)
         liveDataPostImages.postValue(postImages)
     }
 
+    fun removeAllImagesBitMap() {
+        postImagesBitmap.clear()
+        liveDataPostImagesBitmap.postValue(postImagesBitmap)
+    }
+
     val getPostData: UploadPostModel get() = mUploadPostData
 
 
@@ -82,8 +101,8 @@ class AddPostViewModel(application: Application) : AndroidViewModel(application)
             liveDataProgress.postValue(true)
             val postImagesPart = ArrayList<MultipartBody.Part>()
 
-            for (image in postImages) {
-                postImagesPart.add(Global.prepareFilePart("img", image))
+            for (image in postImagesBitmap) {
+                postImagesPart.add(Global.prepareFilePart(mContext,"img", image))
             }
             mUploadPostData.img = postImagesPart
             val result = addPostRepo.addPost(token, mUploadPostData, userId)

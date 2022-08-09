@@ -4,6 +4,7 @@ import android.app.Application
 import android.content.Context
 import android.text.TextUtils
 import android.util.Log
+import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -429,6 +430,7 @@ class AuthViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
 
+
     fun updateName(token: String, name: String) {
         if (!Global.hasInternetConnectivity(mContext)) {
             liveDataMessage.postValue(mContext.getString(R.string.check_your_internet))
@@ -493,5 +495,6 @@ class AuthViewModel(application: Application) : AndroidViewModel(application) {
             liveDataProgress.postValue(false)
         }
     }
+
 
 }

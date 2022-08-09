@@ -1,41 +1,49 @@
 {
   "project_info": {
-    "project_number": "12215418324",
-    "project_id": "justfriend-534e4",
-    "storage_bucket": "justfriend-534e4.appspot.com"
+    "project_number": "243352145946",
+    "project_id": "justfriend-112b2",
+    "storage_bucket": "justfriend-112b2.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:12215418324:android:5f873f7b439e1e597dea41",
+        "mobilesdk_app_id": "1:243352145946:android:9f69401502e8fe3bc701a3",
         "android_client_info": {
           "package_name": "com.justfriends"
         }
       },
       "oauth_client": [
         {
-          "client_id": "12215418324-ns7n7etlbrtqejhcku5bm2plq8mtb69a.apps.googleusercontent.com",
+          "client_id": "243352145946-d79tdbdak6eh7qekgps42im9r870996i.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.justfriends",
-            "certificate_hash": "ba16c71e69ba438abd8d82d3c3ff8f41a9a9da97"
+            "certificate_hash": "c278824e895e321d0a075cd5a99f53c9747fadfa"
           }
         },
         {
-          "client_id": "12215418324-006hfcgmbcvafi3hedhdeo3dg4cv0lel.apps.googleusercontent.com",
+          "client_id": "243352145946-m4rqtrkbt1q4mrdkhdsk9r782pdjs90u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.justfriends",
+            "certificate_hash": "4758ebfab1523274bc9cd417249b87402c2881f0"
+          }
+        },
+        {
+          "client_id": "243352145946-gaqukku05b2eq193u706p9rctmlkih4n.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAvZU-okyBCLMCHeIps5c4_H8UitCMbsr0"
+          "current_key": "AIzaSyAxjujnrRdM3p0GMOrGt6O0hWYFugtlSXw"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "12215418324-006hfcgmbcvafi3hedhdeo3dg4cv0lel.apps.googleusercontent.com",
+              "client_id": "243352145946-gaqukku05b2eq193u706p9rctmlkih4n.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

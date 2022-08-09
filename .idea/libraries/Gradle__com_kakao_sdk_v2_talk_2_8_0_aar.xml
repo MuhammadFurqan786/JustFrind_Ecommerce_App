@@ -1,13 +1,22 @@
 <component name="libraryTable">
   <library name="Gradle: com.kakao.sdk:v2-talk:2.8.0@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/88d7a1c571757ecb7453d5b73eb58add/transformed/jetified-v2-talk-2.8.0/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/88d7a1c571757ecb7453d5b73eb58add/transformed/jetified-v2-talk-2.8.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/88d7a1c571757ecb7453d5b73eb58add/transformed/jetified-v2-talk-2.8.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/ca6279846d709518fb70a2936165431d/transformed/jetified-v2-talk-2.8.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/ca6279846d709518fb70a2936165431d/transformed/jetified-v2-talk-2.8.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/ca6279846d709518fb70a2936165431d/transformed/jetified-v2-talk-2.8.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/e2816f8a82cd1611f6e33e1e33c20630/transformed/jetified-v2-talk-2.8.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/e2816f8a82cd1611f6e33e1e33c20630/transformed/jetified-v2-talk-2.8.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/e2816f8a82cd1611f6e33e1e33c20630/transformed/jetified-v2-talk-2.8.0/AndroidManifest.xml" />
+      <root url="file://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/e2816f8a82cd1611f6e33e1e33c20630/transformed/jetified-v2-talk-2.8.0/res" />
+      <root url="file://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/d685289978320ff3cc3432db3e139225/transformed/jetified-v2-talk-2.8.0/res" />
+      <root url="file://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/1a7cd33dadb78634bc50c80605eaab0c/transformed/jetified-v2-talk-2.8.0/res" />
+      <root url="file://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/1a7cd33dadb78634bc50c80605eaab0c/transformed/jetified-v2-talk-2.8.0/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/1a7cd33dadb78634bc50c80605eaab0c/transformed/jetified-v2-talk-2.8.0/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.kakao.sdk/v2-talk/2.8.0/b55e9060e00ad9c6c9f59e7f0a3dc2ee5fc7f35b/v2-talk-2.8.0-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/modules-2/files-2.1/com.kakao.sdk/v2-talk/2.8.0/b55e9060e00ad9c6c9f59e7f0a3dc2ee5fc7f35b/v2-talk-2.8.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

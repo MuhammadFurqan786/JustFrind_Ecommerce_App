@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_primary"
+    android:focusable="false"
+    android:screenReaderFocusable="true"
+    android:orientation="vertical"
+    tools:targetApi="p">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/color_primary"
+        app:elevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:liftOnScroll="false"
+        app:tabIndicatorHeight="0dp">
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/gl_end"
+            app:layout_constraintStart_toStartOf="@id/gl_start"
+            app:layout_constraintTop_toBottomOf="@id/app_bar_layout">
+
+
+            <TextView
+                android:id="@+id/tv_create_your_account_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/noto_sans_kr_bold"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="6dp"
+                android:text="@string/enter_your_shipping_address"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/gl_end"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/gl_start"
+                app:layout_constraintTop_toBottomOf="@id/iv_just_friend" />
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/bg_edit_text_box"
+                android:fontFamily="@font/noto_sans_kr_light"
+                android:gravity="start"
+                android:hint="@string/name"
+                android:importantForAutofill="no"
+                android:includeFontPadding="false"
+                android:inputType="textPersonName"
+                android:maxLength="30"
+                android:padding="16dp"
+                android:singleLine="true"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+                android:textColor="@color/white"
+                android:textColorHint="@color/color_text_secondary"
+                android:textCursorDrawable="@null" />
+
+            <EditText
+                android:id="@+id/et_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/bg_edit_text_box"
+                android:fontFamily="@font/noto_sans_kr_light"
+                android:gravity="start"
+                android:hint="@string/phone_number"
+                android:importantForAutofill="no"
+                android:includeFontPadding="false"
+                android:inputType="textPersonName"
+                android:maxLength="30"
+                android:padding="16dp"
+                android:singleLine="true"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+                android:textColor="@color/white"
+                android:textColorHint="@color/color_text_secondary"
+                android:textCursorDrawable="@null" />
+
+            <EditText
+                android:id="@+id/et_house_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_edit_text_box"
+                android:fontFamily="@font/noto_sans_kr_light"
+                android:gravity="start"
+                android:hint="@string/house_number"
+                android:importantForAutofill="no"
+                android:includeFontPadding="false"
+                android:padding="16dp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+                android:textColor="@color/white"
+                android:textColorHint="@color/color_text_secondary"
+                android:textCursorDrawable="@null"
+                tools:ignore="LabelFor" />
+
+            <EditText
+                android:id="@+id/et_address_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_edit_text_box"
+                android:fontFamily="@font/noto_sans_kr_light"
+                android:gravity="start"
+                android:hint="@string/address_name"
+                android:importantForAutofill="no"
+                android:includeFontPadding="false"
+                android:padding="16dp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+                android:textColor="@color/white"
+                android:textColorHint="@color/color_text_secondary"
+                android:textCursorDrawable="@null"
+                tools:ignore="LabelFor" />
+
+            <EditText
+                android:id="@+id/et_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_edit_text_box"
+                android:fontFamily="@font/noto_sans_kr_light"
+                android:gravity="start"
+                android:hint="@string/address"
+                android:importantForAutofill="no"
+                android:includeFontPadding="false"
+                android:padding="16dp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+                android:textColor="@color/white"
+                android:textColorHint="@color/color_text_secondary"
+                android:textCursorDrawable="@null"
+                tools:ignore="LabelFor" />
+
+            <EditText
+                android:id="@+id/et_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_edit_text_box"
+                android:fontFamily="@font/noto_sans_kr_light"
+                android:gravity="start"
+                android:hint="@string/area"
+                android:importantForAutofill="no"
+                android:includeFontPadding="false"
+                android:padding="16dp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+                android:textColor="@color/white"
+                android:textColorHint="@color/color_text_secondary"
+                android:textCursorDrawable="@null"
+                tools:ignore="LabelFor" />
+
+            <EditText
+                android:id="@+id/et_pin_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_edit_text_box"
+                android:fontFamily="@font/noto_sans_kr_light"
+                android:gravity="start"
+                android:hint="@string/zipcode"
+                android:importantForAutofill="no"
+                android:includeFontPadding="false"
+                android:padding="16dp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+                android:textColor="@color/white"
+                android:textColorHint="@color/color_text_secondary"
+                android:textCursorDrawable="@null"
+                tools:ignore="LabelFor" />
+
+            <EditText
+                android:id="@+id/et_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_edit_text_box"
+                android:fontFamily="@font/noto_sans_kr_light"
+                android:gravity="start"
+                android:hint="@string/city"
+                android:importantForAutofill="no"
+                android:includeFontPadding="false"
+                android:padding="16dp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+                android:textColor="@color/white"
+                android:textColorHint="@color/color_text_secondary"
+                android:textCursorDrawable="@null"
+                tools:ignore="LabelFor" />
+
+
+            <EditText
+                android:id="@+id/et_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_edit_text_box"
+                android:fontFamily="@font/noto_sans_kr_light"
+                android:gravity="start"
+                android:hint="@string/state"
+                android:importantForAutofill="no"
+                android:includeFontPadding="false"
+                android:padding="16dp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+                android:textColor="@color/white"
+                android:textColorHint="@color/color_text_secondary"
+                android:textCursorDrawable="@null"
+                tools:ignore="LabelFor" />
+
+            <Button
+                android:id="@+id/bt_continue"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/noto_sans_kr_bold"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="@string/continues"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                android:textColor="@color/white"
+                app:backgroundTint="@color/selector_button"
+                app:shapeAppearance="@style/ShapeAppearance.App.SmallComponents_round_8" />
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

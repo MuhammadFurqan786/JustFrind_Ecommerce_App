@@ -271,7 +271,7 @@
                     android:fontFamily="@font/noto_sans_kr_regular"
                     android:gravity="end"
                     android:includeFontPadding="false"
-                    android:text="Automotive"
+                    android:text="@string/automotive"
                     android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
                     android:textColor="@color/color_primary_text"
                     app:layout_constraintBottom_toBottomOf="@+id/tv_category_header"
@@ -311,7 +311,7 @@
                     android:fontFamily="@font/noto_sans_kr_regular"
                     android:gravity="end"
                     android:includeFontPadding="false"
-                    tools:text="Best"
+                    tools:text="@string/condition_value"
                     android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
                     android:textColor="@color/color_primary_text"
                     app:layout_constraintBottom_toBottomOf="@+id/tv_condition_header"
@@ -352,7 +352,7 @@
                     android:fontFamily="@font/noto_sans_kr_regular"
                     android:gravity="end"
                     android:includeFontPadding="false"
-                    tools:text="1200 won"
+                    tools:text="@string/won"
                     android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
                     android:textColor="@color/color_primary_text"
                     app:layout_constraintBottom_toBottomOf="@+id/tv_price_header"
@@ -563,7 +563,6 @@
                 android:id="@+id/gp_bt_chat_buy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:visibility="gone"
                 app:constraint_referenced_ids="view_line_bg,bt_chat,bt_buy" />
 
 

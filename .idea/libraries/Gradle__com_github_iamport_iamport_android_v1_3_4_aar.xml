@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.iamport:iamport-android:v1.3.4@aar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/433cebdb0f1057cede0a5557c5c0af8f/transformed/jetified-iamport-android-v1.3.4/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/433cebdb0f1057cede0a5557c5c0af8f/transformed/jetified-iamport-android-v1.3.4/res" />
+      <root url="file://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/433cebdb0f1057cede0a5557c5c0af8f/transformed/jetified-iamport-android-v1.3.4/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/modules-2/files-2.1/com.github.iamport/iamport-android/v1.3.4/952fb4fa2a0b23ce056ff83c8b1dbe3e26349e4/iamport-android-v1.3.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

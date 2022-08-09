@@ -5,10 +5,85 @@
       <map>
         <entry key="..\:/Android projects/jsut_friend/just-friend/app/src/main/res/layout/fragment_search_kakao_location.xml" value="0.1125" />
         <entry key="..\:/Android projects/jsut_friend/just-friend/app/src/main/res/layout/fragment_sign_up.xml" value="0.2947019867549669" />
+        <entry key="..\:/just-friend/app/src/main/res/drawable/bg_button_primary.xml" value="0.1" />
+        <entry key="..\:/just-friend/app/src/main/res/drawable/bg_dialog_inset.xml" value="0.1" />
+        <entry key="..\:/just-friend/app/src/main/res/drawable/bg_edit_text_box.xml" value="0.1" />
+        <entry key="..\:/just-friend/app/src/main/res/drawable/bg_gray.xml" value="0.1" />
+        <entry key="..\:/just-friend/app/src/main/res/drawable/bg_gray_edit_textbox.xml" value="0.1" />
+        <entry key="..\:/just-friend/app/src/main/res/drawable/cursor_white.xml" value="0.101" />
+        <entry key="..\:/just-friend/app/src/main/res/drawable/ic_baseline_camera_alt_24.xml" value="0.1" />
+        <entry key="..\:/just-friend/app/src/main/res/drawable/ic_drop_arrow.xml" value="0.119" />
+        <entry key="..\:/just-friend/app/src/main/res/drawable/ic_gallery.xml" value="0.1" />
+        <entry key="..\:/just-friend/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1345" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/activity_main.xml" value="0.16969185310257492" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/activity_shipping.xml" value="0.17415730337078653" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/activity_splash.xml" value="0.25" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/adapter_chat.xml" value="0.18981481481481483" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/adapter_favorites.xml" value="0.1718683197947841" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/adapter_foundation_items.xml" value="0.1718683197947841" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/adapter_gallery.xml" value="0.1718683197947841" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/adapter_home_categories.xml" value="0.1718683197947841" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/adapter_home_items.xml" value="0.1718683197947841" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/adapter_iv_zoomable.xml" value="0.1718683197947841" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/adapter_kakao_location.xml" value="0.1718683197947841" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/adapter_notification.xml" value="0.25" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/adapter_photos.xml" value="0.1718683197947841" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/adapter_post.xml" value="0.33" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/adapter_select_menu_category.xml" value="0.1718683197947841" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/adapter_select_sub_menu_category.xml" value="0.1718683197947841" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/adapter_selling.xml" value="0.18" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/adapter_slider_img.xml" value="0.1718683197947841" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/adapter_sold.xml" value="0.22" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/adapter_user_review.xml" value="0.1718683197947841" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/dia_permission_reason.xml" value="0.1718683197947841" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/dialog_choose_img_options.xml" value="0.19739583333333333" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/dialog_filter.xml" value="0.1718683197947841" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/dialog_safe_transaction.xml" value="0.1718683197947841" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/dialog_sort.xml" value="0.1718683197947841" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/fragment_add_post.xml" value="0.33" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/fragment_chat.xml" value="0.17" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/fragment_dialog_user_report.xml" value="0.19739583333333333" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/fragment_dialogue_email.xml" value="0.21" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/fragment_forgot_password.xml" value="0.25" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/fragment_foundation_dialog.xml" value="0.14272474513438368" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/fragment_home.xml" value="0.33" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/fragment_list_chat.xml" value="0.1" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/fragment_login.xml" value="0.25" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/fragment_my_account.xml" value="0.25" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/fragment_my_listings.xml" value="0.1718683197947841" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/fragment_otp_verification.xml" value="0.1718683197947841" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/fragment_post_detail.xml" value="0.25" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/fragment_public_profile.xml" value="0.25" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/fragment_search_kakao_location.xml" value="0.1" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/fragment_see_all_reviews.xml" value="0.19739583333333333" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/fragment_selling.xml" value="0.1" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/fragment_sign_up.xml" value="0.33" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/fragment_sold.xml" value="0.1" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/fragment_sort_dialog.xml" value="0.1718683197947841" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/fragment_welcome.xml" value="0.1" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/fragment_welcome_1.xml" value="0.1718683197947841" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/fragment_welcome_2.xml" value="0.1718683197947841" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/fragment_welcome_3.xml" value="0.1718683197947841" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/item_channel_chooser.xml" value="0.19739583333333333" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/item_chat_me.xml" value="0.19739583333333333" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/item_chat_others.xml" value="0.1718683197947841" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/layout_empty_file.xml" value="0.1718683197947841" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/layout_global_progress.xml" value="0.1718683197947841" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/layout_progress_full_screen.xml" value="0.1718683197947841" />
+        <entry key="..\:/just-friend/app/src/main/res/layout/notification.xml" value="0.16203505771697307" />
+        <entry key="..\:/just-friend/app/src/main/res/menu/menu_bottom_nav.xml" value="0.1718683197947841" />
+        <entry key="..\:/just-friend/app/src/main/res/menu/menu_reviews.xml" value="0.1718683197947841" />
+        <entry key="..\:/just-friend/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1345" />
+        <entry key="..\:/just-friend/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1345" />
+        <entry key="..\:/just-friend/lib/src/main/res/layout/main_activity.xml" value="0.1" />
+        <entry key="..\:/just-friend/lib/src/main/res/layout/mobile_web_view_mode_fragment.xml" value="0.1527651858567543" />
+        <entry key="..\:/just-friend/lib/src/main/res/layout/payment_fragment.xml" value="0.1527651858567543" />
+        <entry key="..\:/just-friend/lib/src/main/res/layout/result_fragment.xml" value="0.1527651858567543" />
+        <entry key="..\:/just-friend/lib/src/main/res/layout/web_view_mode_fragment.xml" value="0.1527651858567543" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

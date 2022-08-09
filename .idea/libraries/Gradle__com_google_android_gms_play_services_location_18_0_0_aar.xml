@@ -1,12 +1,21 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.android.gms:play-services-location:18.0.0@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/1a1de14286b3e439cc2d5a4df27b3621/transformed/jetified-play-services-location-18.0.0/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/1a1de14286b3e439cc2d5a4df27b3621/transformed/jetified-play-services-location-18.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/1a1de14286b3e439cc2d5a4df27b3621/transformed/jetified-play-services-location-18.0.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/4168c62dcae4a1c5f2ae259e36054fbc/transformed/jetified-play-services-location-18.0.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/4168c62dcae4a1c5f2ae259e36054fbc/transformed/jetified-play-services-location-18.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/4168c62dcae4a1c5f2ae259e36054fbc/transformed/jetified-play-services-location-18.0.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/508ed507687ceef5fcdfab1b90a71f91/transformed/jetified-play-services-location-18.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/508ed507687ceef5fcdfab1b90a71f91/transformed/jetified-play-services-location-18.0.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/508ed507687ceef5fcdfab1b90a71f91/transformed/jetified-play-services-location-18.0.0/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/508ed507687ceef5fcdfab1b90a71f91/transformed/jetified-play-services-location-18.0.0/res" />
+      <root url="file://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/51d4acf099f2570b026b0d96caa29f11/transformed/jetified-play-services-location-18.0.0/res" />
+      <root url="file://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/aa4990cfa14c50f8a9d7e4858f7db878/transformed/jetified-play-services-location-18.0.0/res" />
+      <root url="file://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/aa4990cfa14c50f8a9d7e4858f7db878/transformed/jetified-play-services-location-18.0.0/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/aa4990cfa14c50f8a9d7e4858f7db878/transformed/jetified-play-services-location-18.0.0/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.gms/play-services-location/18.0.0/21c0fe95fc8d679c87e65c85129c1191a8ca8625/play-services-location-18.0.0-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/modules-2/files-2.1/com.google.android.gms/play-services-location/18.0.0/21c0fe95fc8d679c87e65c85129c1191a8ca8625/play-services-location-18.0.0-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES />
   </library>

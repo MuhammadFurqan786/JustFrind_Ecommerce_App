@@ -1,15 +1,21 @@
 <component name="libraryTable">
   <library name="Gradle: com.tbuonomo:dotsindicator:4.2@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/8e1bdaf25cd1385265efac1e85695db6/transformed/jetified-dotsindicator-4.2/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/8e1bdaf25cd1385265efac1e85695db6/transformed/jetified-dotsindicator-4.2/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/8e1bdaf25cd1385265efac1e85695db6/transformed/jetified-dotsindicator-4.2/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/bc082de34755902b940330f9753e9743/transformed/jetified-dotsindicator-4.2/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/bc082de34755902b940330f9753e9743/transformed/jetified-dotsindicator-4.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/bc082de34755902b940330f9753e9743/transformed/jetified-dotsindicator-4.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/b0c7caf84e4c07342cf3660e7cfe9e51/transformed/jetified-dotsindicator-4.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/b0c7caf84e4c07342cf3660e7cfe9e51/transformed/jetified-dotsindicator-4.2/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/b0c7caf84e4c07342cf3660e7cfe9e51/transformed/jetified-dotsindicator-4.2/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/f2f9fb1219548c676ec86352418ec9bd/transformed/jetified-dotsindicator-4.2/res" />
+      <root url="jar://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/f2f9fb1219548c676ec86352418ec9bd/transformed/jetified-dotsindicator-4.2/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/f2f9fb1219548c676ec86352418ec9bd/transformed/jetified-dotsindicator-4.2/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.tbuonomo/dotsindicator/4.2/a52ad04c8d5a78ba86bd327191322c215b10272f/dotsindicator-4.2-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/modules-2/files-2.1/com.tbuonomo/dotsindicator/4.2/a52ad04c8d5a78ba86bd327191322c215b10272f/dotsindicator-4.2-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.tbuonomo/dotsindicator/4.2/51e093668d4289e5ec4f2a2b0f43825cfb6e9629/dotsindicator-4.2-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/modules-2/files-2.1/com.tbuonomo/dotsindicator/4.2/51e093668d4289e5ec4f2a2b0f43825cfb6e9629/dotsindicator-4.2-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

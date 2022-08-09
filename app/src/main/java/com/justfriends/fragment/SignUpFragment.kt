@@ -4,10 +4,7 @@ import android.content.Context
 import android.graphics.Color
 import android.graphics.Typeface
 import android.os.Bundle
-import android.text.Spannable
-import android.text.SpannableString
-import android.text.Spanned
-import android.text.TextPaint
+import android.text.*
 import android.text.method.LinkMovementMethod
 import android.text.style.ClickableSpan
 import android.text.style.ForegroundColorSpan
@@ -21,15 +18,21 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
+import com.google.firebase.FirebaseException
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.PhoneAuthCredential
+import com.google.firebase.auth.PhoneAuthOptions
+import com.google.firebase.auth.PhoneAuthProvider
 import com.justfriends.NavGraphDirections
+import com.justfriends.R
 import com.justfriends.R.string
 import com.justfriends.databinding.FragmentSignUpBinding
 import com.justfriends.interfaces.IMainActivity
 import com.justfriends.preference.PreferenceHelper
 import com.justfriends.utils.Global
 import com.justfriends.viewModel.AuthViewModel
-import java.time.format.TextStyle
 import java.util.*
+import java.util.concurrent.TimeUnit
 
 
 class SignUpFragment : Fragment() {
@@ -70,14 +73,7 @@ class SignUpFragment : Fragment() {
         authViewModel.getMessageObserver.observe(viewLifecycleOwner) {
             mIMainActivity?.showMessage(it)
         }
-        authViewModel.getOtpObserver.observe(viewLifecycleOwner) {
-            val directions =
-                NavGraphDirections.actionGlobalNavOtpVerificationFragment(
-                    countryCode.toString(), mobile.toString(), name.toString(),
-                    email.toString(), password.toString(), uniqueID, it.data.oTP.toString()
-                )
-            findNavController().navigate(directions)
-        }
+
         authViewModel.getCheckEmailObserver.observe(viewLifecycleOwner) {
             binding.btSignIn.isEnabled = true
         }
@@ -137,18 +133,100 @@ class SignUpFragment : Fragment() {
             confirmPassword = binding.etConfirmPassword.text.toString().trim()
             countryCode = binding.ccp.selectedCountryCodeWithPlus
             if (binding.cbTermsConditions.isChecked) {
-                authViewModel.getOtp(
-                    email!!,
-                    password!!,
-                    name!!,
-                    countryCode!!,
-                    mobile!!, confirmPassword!!
-                )
-            } else {
-                Global.showMessage(binding.root, getString(string.terms))
+                if (TextUtils.isEmpty(name)) {
+                    Toast.makeText(
+                        activity,
+                        getString(R.string.message_enter_name),
+                        Toast.LENGTH_SHORT
+                    ).show()
+                } else if (!Global.isEmailValid(email)) {
+                    Toast.makeText(
+                        activity,
+                        getString(R.string.message_valid_email),
+                        Toast.LENGTH_SHORT
+                    ).show()
+
+                } else if (password != confirmPassword) {
+                    Toast.makeText(
+                        activity,
+                        getString(R.string.message_password_same),
+                        Toast.LENGTH_SHORT
+                    ).show()
+
+                } else if (TextUtils.isEmpty(email)) {
+                    Toast.makeText(
+                        activity,
+                        getString(R.string.message_valid_email),
+                        Toast.LENGTH_SHORT
+                    ).show()
+
+                } else if (TextUtils.isEmpty(mobile)) {
+                    Toast.makeText(
+                        activity,
+                        getString(R.string.message_enter_phone),
+                        Toast.LENGTH_SHORT
+                    ).show()
+
+                } else if (TextUtils.isEmpty(password)) {
+                    Toast.makeText(
+                        activity,
+                        getString(R.string.message_enter_password),
+                        Toast.LENGTH_SHORT
+                    ).show()
+                } else if (mobile!!.length < 10) {
+                    Toast.makeText(
+                        activity,
+                        getString(R.string.message_valid_phone),
+                        Toast.LENGTH_SHORT
+                    ).show()
+
+                } else if (password!!.length < 8) {
+                    Toast.makeText(
+                        activity,
+                        getString(R.string.message_password_length),
+                        Toast.LENGTH_SHORT
+                    ).show()
+
+                } else if (!Global.hasInternetConnectivity(requireActivity())) {
+                    Toast.makeText(
+                        activity,
+                        getString(R.string.check_your_internet),
+                        Toast.LENGTH_SHORT
+                    ).show()
+
+                } else {
+                    sendVerificationCode(
+                        email!!,
+                        password!!,
+                        name!!,
+                        countryCode,
+                        mobile!!,
+                        confirmPassword!!
+                    )
+                }
+
             }
+
+
         }
     }
+
+    private fun sendVerificationCode(
+        email: String,
+        password: String,
+        name: String,
+        countryCode: String?,
+        mobile: String,
+        confirmPassword: String
+    ) {
+        val directions =
+            NavGraphDirections.actionGlobalNavOtpVerificationFragment(
+                countryCode.toString(), mobile, name,
+                email, password, uniqueID
+            )
+        findNavController().navigate(directions)
+    }
+
 
     private fun setSpannable() {
         val ss = SpannableString(getString(string.messageAlreadyHaveAccount))
@@ -163,9 +241,14 @@ class SignUpFragment : Fragment() {
                 ds.isUnderlineText = false
             }
         }
-        ss.setSpan(clickableSpan, 24,ss.length, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
-        ss.setSpan(StyleSpan(Typeface.BOLD), 24,ss.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
-        ss.setSpan(ForegroundColorSpan(Color.WHITE), 24,ss.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+        ss.setSpan(clickableSpan, 24, ss.length, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+        ss.setSpan(StyleSpan(Typeface.BOLD), 24, ss.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+        ss.setSpan(
+            ForegroundColorSpan(Color.WHITE),
+            24,
+            ss.length,
+            Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+        )
         binding.tvAlreadyHaveAccount.text = ss
         binding.tvAlreadyHaveAccount.text = ss
         binding.tvAlreadyHaveAccount.movementMethod = LinkMovementMethod.getInstance()

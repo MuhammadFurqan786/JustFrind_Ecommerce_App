@@ -1,13 +1,22 @@
 <component name="libraryTable">
   <library name="Gradle: com.kakao.sdk:v2-template:2.8.0@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/9336f0c4e74dc6e14a4318eb879c58a3/transformed/jetified-v2-template-2.8.0/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/9336f0c4e74dc6e14a4318eb879c58a3/transformed/jetified-v2-template-2.8.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/9336f0c4e74dc6e14a4318eb879c58a3/transformed/jetified-v2-template-2.8.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/dddd8718d349fc5737f2278c56e3228f/transformed/jetified-v2-template-2.8.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/dddd8718d349fc5737f2278c56e3228f/transformed/jetified-v2-template-2.8.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/dddd8718d349fc5737f2278c56e3228f/transformed/jetified-v2-template-2.8.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/e7eabdc92fe926485c326e25c683b2a3/transformed/jetified-v2-template-2.8.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/e7eabdc92fe926485c326e25c683b2a3/transformed/jetified-v2-template-2.8.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/e7eabdc92fe926485c326e25c683b2a3/transformed/jetified-v2-template-2.8.0/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/e7eabdc92fe926485c326e25c683b2a3/transformed/jetified-v2-template-2.8.0/res" />
+      <root url="file://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/8eea27b79c1e2d7577cb49151b0c96a6/transformed/jetified-v2-template-2.8.0/res" />
+      <root url="file://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/d17f6151778b09a52162315d5b064a62/transformed/jetified-v2-template-2.8.0/res" />
+      <root url="jar://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/d17f6151778b09a52162315d5b064a62/transformed/jetified-v2-template-2.8.0/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/d17f6151778b09a52162315d5b064a62/transformed/jetified-v2-template-2.8.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.kakao.sdk/v2-template/2.8.0/6c9731222104a627ad37110905f6061b1321fe7a/v2-template-2.8.0-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/modules-2/files-2.1/com.kakao.sdk/v2-template/2.8.0/6c9731222104a627ad37110905f6061b1321fe7a/v2-template-2.8.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

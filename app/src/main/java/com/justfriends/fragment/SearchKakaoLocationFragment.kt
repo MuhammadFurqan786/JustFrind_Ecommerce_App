@@ -19,6 +19,7 @@ import com.justfriends.model.DocumentsItem
 import com.justfriends.preference.PreferenceHelper
 import com.justfriends.preference.PreferenceKeys
 import com.justfriends.utils.Global
+import com.justfriends.utils.PrefKeys
 import com.justfriends.viewModel.KakaoMapViewModel
 
 
@@ -80,9 +81,9 @@ class SearchKakaoLocationFragment : Fragment(), KakaoLocationAdapter.LocationCli
 
                 }
                 context?.let {
-                    PreferenceHelper.getPref(it).getStringValue(PreferenceKeys.KEY_USER_TOKEN)?.let {
-                        kakaoViewModel.getKakaoMap(
-                            it,
+                    PreferenceHelper.getPref(it).getStringValue(PreferenceKeys.KEY_LOCATION)?.let {
+                        kakaoViewModel.getKakaoMap(mIMainActivity?.getPreference()?.getStringValue(
+                            PrefKeys.KEY_USER_TOKEN) ?: "",
                             binding.etSearch.text.toString().trim()
 
                         )
@@ -105,14 +106,14 @@ class SearchKakaoLocationFragment : Fragment(), KakaoLocationAdapter.LocationCli
             }
         })
 
-        /*  binding.etSearch.setOnEditorActionListener {
+        binding.etSearch.setOnEditorActionListener {
                   textView, keyCode, keyEvent ->
               kakaoViewModel.getKakaoMap(
-                  "KakaoAK 2d7c9c8c9a403b7b28eead5e68aaadd9",
+                  mIMainActivity?.getPreference()?.getStringValue(PrefKeys.KEY_USER_TOKEN) ?: "",
                   binding.etSearch.text.toString().trim()
               )
               false
-          }*/
+          }
     }
 
     override fun onAttach(context: Context) {

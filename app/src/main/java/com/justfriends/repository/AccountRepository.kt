@@ -1,7 +1,6 @@
 package com.justfriends.repository
 
 import android.util.Log
-import com.google.gson.JsonObject
 import com.justfriends.model.*
 import com.justfriends.network.RetrofitService
 import java.lang.Exception

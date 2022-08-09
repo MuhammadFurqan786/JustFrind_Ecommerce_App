@@ -1,13 +1,19 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.databinding:databinding-runtime:7.0.3@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/82bc5819be98ed70bdf2389b17df43ce/transformed/databinding-runtime-7.0.3/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/82bc5819be98ed70bdf2389b17df43ce/transformed/databinding-runtime-7.0.3/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/82bc5819be98ed70bdf2389b17df43ce/transformed/databinding-runtime-7.0.3/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/1124b3868ea75ebb736fdca150515672/transformed/databinding-runtime-7.0.3/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/1124b3868ea75ebb736fdca150515672/transformed/databinding-runtime-7.0.3/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/1124b3868ea75ebb736fdca150515672/transformed/databinding-runtime-7.0.3/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/93a7ef0e06c85c9daf0f6d531be23928/transformed/databinding-runtime-7.0.3/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/93a7ef0e06c85c9daf0f6d531be23928/transformed/databinding-runtime-7.0.3/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/93a7ef0e06c85c9daf0f6d531be23928/transformed/databinding-runtime-7.0.3/AndroidManifest.xml" />
+      <root url="file://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/7dd5b01d07546a3cde14ad1a62660483/transformed/databinding-runtime-7.0.3/res" />
+      <root url="jar://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/7dd5b01d07546a3cde14ad1a62660483/transformed/databinding-runtime-7.0.3/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/transforms-3/7dd5b01d07546a3cde14ad1a62660483/transformed/databinding-runtime-7.0.3/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.databinding/databinding-runtime/7.0.3/710036e0160fe559405f2461f5b0022419ecb6b3/databinding-runtime-7.0.3-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../agora_broadcast_tutorial-completed/caches/modules-2/files-2.1/androidx.databinding/databinding-runtime/7.0.3/710036e0160fe559405f2461f5b0022419ecb6b3/databinding-runtime-7.0.3-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
