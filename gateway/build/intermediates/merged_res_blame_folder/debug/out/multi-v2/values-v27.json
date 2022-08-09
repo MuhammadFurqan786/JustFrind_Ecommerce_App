@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "E:\\just-friend\\gateway\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v27\\values-v27.xml",
+            "map": [
+                {
+                    "source": "E:\\agora_broadcast_tutorial-completed\\caches\\transforms-3\\697689346237979c4cf5309c009d7935\\transformed\\jetified-iamport-android-v1.3.4\\res\\values-v27\\values-v27.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "14",
+                        "endColumns": "12",
+                        "endOffsets": "551"
+                    }
+                }
+            ]
+        }
+    ]
+}

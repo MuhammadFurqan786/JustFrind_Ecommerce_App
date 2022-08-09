@@ -1,0 +1,18 @@
+com/iamport/sdk/BR.java
+ com.iamport.sdk.BR
+com/iamport/sdk/databinding/WebviewActivityBinding.java
+ com.iamport.sdk.databinding.WebviewActivityBinding
+com/iamport/sdk/BuildConfig.java
+ com.iamport.sdk.BuildConfig
+com/iamport/sdk/databinding/WebviewActivityBindingImpl.java
+ com.iamport.sdk.databinding.WebviewActivityBindingImpl
+com/iamport/sdk/DataBindingTriggerClass.java
+ com.iamport.sdk.DataBindingTriggerClass
+com/iamport/sdk/DataBinderMapperImpl.java
+ com.iamport.sdk.DataBinderMapperImpl
+ com.iamport.sdk.DataBinderMapperImpl$InnerBrLookup
+ com.iamport.sdk.DataBinderMapperImpl$InnerLayoutIdLookup
+androidx/databinding/library/baseAdapters/BR.java
+ androidx.databinding.library.baseAdapters.BR
+androidx/databinding/DataBindingComponent.java
+ androidx.databinding.DataBindingComponent

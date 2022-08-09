@@ -1,0 +1,251 @@
+-- Merging decision tree log ---
+manifest
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:2:1-88:12
+INJECTED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:2:1-88:12
+INJECTED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:2:1-88:12
+	package
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:3:5-30
+		INJECTED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml
+		INJECTED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:5:5-80
+	android:name
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:5:22-77
+uses-permission#android.permission.INTERNET
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:6:5-67
+	android:name
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:6:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:7:5-79
+	android:name
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:7:22-76
+uses-permission#android.permission.FOREGROUND_SERVICE
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:8:5-77
+	android:name
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:8:22-74
+queries
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:10:5-67:15
+package#finance.chai.app
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:12:9-52
+	android:name
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:12:18-49
+package#com.nhnent.payapp
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:13:9-53
+	android:name
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:13:18-50
+package#com.lottemembers.android
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:14:9-60
+	android:name
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:14:18-57
+package#com.ssg.serviceapp.android.egiftcertificate
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:15:9-79
+	android:name
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:15:18-76
+package#com.inicis.kpay
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:16:9-51
+	android:name
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:16:18-48
+package#com.tmoney.tmpay
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:17:9-52
+	android:name
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:17:18-49
+package#viva.republica.toss
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:18:9-55
+	android:name
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:18:18-52
+package#com.samsung.android.spay
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:19:9-60
+	android:name
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:19:18-57
+package#com.kakao.talk
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:20:9-50
+	android:name
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:20:18-47
+package#com.nhn.android.search
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:21:9-58
+	android:name
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:21:18-55
+package#com.mysmilepay.app
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:22:9-54
+	android:name
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:22:18-51
+package#kvp.jjy.MispAndroid320
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:24:9-58
+	android:name
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:24:18-55
+package#com.kbcard.cxh.appcard
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:25:9-58
+	android:name
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:25:18-55
+package#com.kbstar.liivbank
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:26:9-55
+	android:name
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:26:18-52
+package#com.kbstar.reboot
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:27:9-53
+	android:name
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:27:18-50
+package#com.samsung.android.spaylite
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:28:9-64
+	android:name
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:28:18-61
+package#com.lge.lgpay
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:30:9-49
+	android:name
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:30:18-46
+package#com.hanaskcard.paycla
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:31:9-57
+	android:name
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:31:18-54
+package#kr.co.hanamembers.hmscustomer
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:32:9-65
+	android:name
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:32:18-62
+package#com.hanaskcard.rocomo.potal
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:33:9-63
+	android:name
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:33:18-60
+package#com.citibank.cardapp
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:34:9-56
+	android:name
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:34:18-53
+package#kr.co.citibank.citimobile
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:35:9-61
+	android:name
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:35:18-58
+package#com.lcacApp
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:36:9-47
+	android:name
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:36:18-44
+package#kr.co.samsungcard.mpocket
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:37:9-61
+	android:name
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:37:18-58
+package#com.shcard.smartpay
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:38:9-55
+	android:name
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:38:18-52
+package#com.shinhancard.smartshinhan
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:39:9-64
+	android:name
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:39:18-61
+package#com.hyundaicard.appcard
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:40:9-59
+	android:name
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:40:18-56
+package#nh.smart.nhallonepay
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:41:9-56
+	android:name
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:41:18-53
+package#com.wooricard.smartapp
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:43:9-58
+	android:name
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:43:18-55
+package#com.wooribank.smart.npib
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:44:9-60
+	android:name
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:44:18-57
+package#com.TouchEn.mVaccine.webs
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:46:9-61
+	android:name
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:46:18-58
+package#com.ahnlab.v3mobileplus
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:47:9-59
+	android:name
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:47:18-56
+package#kr.co.shiftworks.vguardweb
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:48:9-62
+	android:name
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:48:18-59
+package#com.lumensoft.touchenappfree
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:51:9-64
+	android:name
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:51:18-61
+package#com.kftc.bankpay.android
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:53:9-60
+	android:name
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:53:18-57
+package#kr.co.kfcc.mobilebank
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:54:9-57
+	android:name
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:54:18-54
+package#com.nh.cashcardapp
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:56:9-54
+	android:name
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:56:18-51
+package#com.knb.psb
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:57:9-47
+	android:name
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:57:18-44
+package#com.lguplus.paynow
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:58:9-54
+	android:name
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:58:18-51
+package#com.kbankwith.smartbank
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:59:9-59
+	android:name
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:59:18-56
+package#com.eg.android.AlipayGphone
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:61:9-63
+	android:name
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:61:18-60
+package#com.sktelecom.tauth
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:63:9-55
+	android:name
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:63:18-52
+package#com.lguplus.smartotp
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:64:9-56
+	android:name
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:64:18-53
+package#com.kt.ktauth
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:65:9-49
+	android:name
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:65:18-46
+package#kr.danal.app.damoum
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:66:9-55
+	android:name
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:66:18-52
+application
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:69:5-87:19
+	android:supportsRtl
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:71:9-35
+	android:allowBackup
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:70:9-35
+	android:usesCleartextTraffic
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:72:9-44
+service#com.iamport.sdk.domain.service.ChaiService
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:74:9-76:38
+	android:enabled
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:76:13-35
+	android:name
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:75:13-55
+activity#com.iamport.sdk.presentation.activity.WebViewActivity
+ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:78:9-85:20
+	android:screenOrientation
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:82:13-49
+	android:launchMode
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:81:13-43
+	android:hardwareAccelerated
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:80:13-47
+	android:configChanges
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:83:13-106
+	android:theme
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:84:13-75
+	android:name
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:79:13-66
+uses-sdk
+INJECTED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml
+INJECTED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml
+INJECTED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml
+INJECTED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml
+		INJECTED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml
+		ADDED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml
+		INJECTED from E:\iamport-android-main\sdk\src\main\AndroidManifest.xml

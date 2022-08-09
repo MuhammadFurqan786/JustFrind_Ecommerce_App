@@ -1,0 +1,215 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.iamport.sdk" >
+4
+5    <uses-sdk
+6        android:minSdkVersion="21"
+6-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml
+7        android:targetSdkVersion="31" />
+7-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml
+8
+9    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+9-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:5:5-80
+9-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:5:22-77
+10    <uses-permission android:name="android.permission.INTERNET" />
+10-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:6:5-67
+10-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:6:22-64
+11    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+11-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:7:5-79
+11-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:7:22-76
+12    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+12-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:8:5-77
+12-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:8:22-74
+13
+14    <queries>
+14-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:10:5-67:15
+15
+16        <!-- 간편결제 -->
+17        <package android:name="finance.chai.app" /> <!-- 차이페이 -->
+17-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:12:9-52
+17-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:12:18-49
+18        <package android:name="com.nhnent.payapp" /> <!-- 페이코 -->
+18-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:13:9-53
+18-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:13:18-50
+19        <package android:name="com.lottemembers.android" /> <!-- LPAY -->
+19-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:14:9-60
+19-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:14:18-57
+20        <package android:name="com.ssg.serviceapp.android.egiftcertificate" /> <!-- SSGPAY -->
+20-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:15:9-79
+20-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:15:18-76
+21        <package android:name="com.inicis.kpay" /> <!-- KPAY -->
+21-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:16:9-51
+21-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:16:18-48
+22        <package android:name="com.tmoney.tmpay" /> <!-- 티머니페이 -->
+22-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:17:9-52
+22-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:17:18-49
+23        <package android:name="viva.republica.toss" /> <!-- 토스페이 -->
+23-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:18:9-55
+23-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:18:18-52
+24        <package android:name="com.samsung.android.spay" /> <!-- 삼성페이 -->
+24-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:19:9-60
+24-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:19:18-57
+25        <package android:name="com.kakao.talk" /> <!-- 카카오페이 -->
+25-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:20:9-50
+25-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:20:18-47
+26        <package android:name="com.nhn.android.search" /> <!-- 네이버 -->
+26-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:21:9-58
+26-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:21:18-55
+27        <package android:name="com.mysmilepay.app" /> <!-- 스마일페이 -->
+27-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:22:9-54
+27-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:22:18-51
+28        <!-- 카드 -->
+29        <package android:name="kvp.jjy.MispAndroid320" /> <!-- ISP페이북 -->
+29-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:24:9-58
+29-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:24:18-55
+30        <package android:name="com.kbcard.cxh.appcard" /> <!-- KBPay -->
+30-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:25:9-58
+30-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:25:18-55
+31        <package android:name="com.kbstar.liivbank" /> <!-- liivbank -->
+31-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:26:9-55
+31-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:26:18-52
+32        <package android:name="com.kbstar.reboot" /> <!-- newliiv -->
+32-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:27:9-53
+32-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:27:18-50
+33        <package android:name="com.samsung.android.spaylite" /> <!-- 삼성페이니 -->
+33-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:28:9-64
+33-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:28:18-61
+34        <package android:name="com.nhnent.payapp" /> <!-- 페이코 -->
+34-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:13:9-53
+34-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:13:18-50
+35        <package android:name="com.lge.lgpay" /> <!-- 엘지페이 -->
+35-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:30:9-49
+35-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:30:18-46
+36        <package android:name="com.hanaskcard.paycla" /> <!-- 하나 -->
+36-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:31:9-57
+36-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:31:18-54
+37        <package android:name="kr.co.hanamembers.hmscustomer" /> <!-- 하나멤버스 -->
+37-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:32:9-65
+37-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:32:18-62
+38        <package android:name="com.hanaskcard.rocomo.potal" /> <!-- 하나공인인증 -->
+38-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:33:9-63
+38-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:33:18-60
+39        <package android:name="com.citibank.cardapp" /> <!-- 씨티 -->
+39-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:34:9-56
+39-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:34:18-53
+40        <package android:name="kr.co.citibank.citimobile" /> <!-- 씨티모바일 -->
+40-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:35:9-61
+40-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:35:18-58
+41        <package android:name="com.lcacApp" /> <!-- 롯데 -->
+41-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:36:9-47
+41-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:36:18-44
+42        <package android:name="kr.co.samsungcard.mpocket" /> <!-- 삼성 -->
+42-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:37:9-61
+42-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:37:18-58
+43        <package android:name="com.shcard.smartpay" /> <!-- 신한 -->
+43-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:38:9-55
+43-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:38:18-52
+44        <package android:name="com.shinhancard.smartshinhan" /> <!-- 신한(ARS/일반/smart) -->
+44-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:39:9-64
+44-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:39:18-61
+45        <package android:name="com.hyundaicard.appcard" /> <!-- 현재 -->
+45-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:40:9-59
+45-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:40:18-56
+46        <package android:name="nh.smart.nhallonepay" /> <!-- 농협 -->
+46-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:41:9-56
+46-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:41:18-53
+47        <package android:name="kr.co.citibank.citimobile" /> <!-- 씨티 -->
+47-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:35:9-61
+47-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:35:18-58
+48        <package android:name="com.wooricard.smartapp" /> <!-- 우리WON카드 -->
+48-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:43:9-58
+48-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:43:18-55
+49        <package android:name="com.wooribank.smart.npib" /> <!-- 우리WON뱅킹 -->
+49-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:44:9-60
+49-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:44:18-57
+50        <!-- 백신 -->
+51        <package android:name="com.TouchEn.mVaccine.webs" /> <!-- TouchEn -->
+51-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:46:9-61
+51-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:46:18-58
+52        <package android:name="com.ahnlab.v3mobileplus" /> <!-- V3 -->
+52-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:47:9-59
+52-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:47:18-56
+53        <package android:name="kr.co.shiftworks.vguardweb" /> <!-- vguard -->
+53-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:48:9-62
+53-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:48:18-59
+54        <!-- 신용카드 공인인증 -->
+55        <package android:name="com.hanaskcard.rocomo.potal" /> <!-- 하나 -->
+55-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:33:9-63
+55-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:33:18-60
+56        <package android:name="com.lumensoft.touchenappfree" /> <!-- 현대 -->
+56-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:51:9-64
+56-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:51:18-61
+57        <!-- 계좌이체 -->
+58        <package android:name="com.kftc.bankpay.android" /> <!-- 뱅크페이 -->
+58-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:53:9-60
+58-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:53:18-57
+59        <package android:name="kr.co.kfcc.mobilebank" /> <!-- MG 새마을금고 -->
+59-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:54:9-57
+59-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:54:18-54
+60        <package android:name="com.kbstar.liivbank" /> <!-- 뱅크페이 -->
+60-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:26:9-55
+60-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:26:18-52
+61        <package android:name="com.nh.cashcardapp" /> <!-- 뱅크페이 -->
+61-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:56:9-54
+61-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:56:18-51
+62        <package android:name="com.knb.psb" /> <!-- BNK경남은행 -->
+62-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:57:9-47
+62-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:57:18-44
+63        <package android:name="com.lguplus.paynow" /> <!-- 페이나우 -->
+63-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:58:9-54
+63-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:58:18-51
+64        <package android:name="com.kbankwith.smartbank" /> <!-- 케이뱅크 -->
+64-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:59:9-59
+64-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:59:18-56
+65        <!-- 해외결제 -->
+66        <package android:name="com.eg.android.AlipayGphone" /> <!-- 페이나우 -->
+66-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:61:9-63
+66-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:61:18-60
+67        <!-- 기타 -->
+68        <package android:name="com.sktelecom.tauth" /> <!-- PASS -->
+68-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:63:9-55
+68-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:63:18-52
+69        <package android:name="com.lguplus.smartotp" /> <!-- PASS -->
+69-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:64:9-56
+69-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:64:18-53
+70        <package android:name="com.kt.ktauth" /> <!-- PASS -->
+70-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:65:9-49
+70-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:65:18-46
+71        <package android:name="kr.danal.app.damoum" /> <!-- 다날 다모음 -->
+71-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:66:9-55
+71-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:66:18-52
+72    </queries>
+73
+74    <application
+74-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:69:5-87:19
+75        android:allowBackup="true"
+75-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:70:9-35
+76        android:supportsRtl="true"
+76-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:71:9-35
+77        android:usesCleartextTraffic="true" >
+77-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:72:9-44
+78        <service
+78-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:74:9-76:38
+79            android:name="com.iamport.sdk.domain.service.ChaiService"
+79-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:75:13-55
+80            android:enabled="true" />
+80-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:76:13-35
+81
+82        <activity
+82-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:78:9-85:20
+83            android:name="com.iamport.sdk.presentation.activity.WebViewActivity"
+83-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:79:13-66
+84            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize"
+84-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:83:13-106
+85            android:hardwareAccelerated="true"
+85-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:80:13-47
+86            android:launchMode="singleTop"
+86-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:81:13-43
+87            android:screenOrientation="portrait"
+87-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:82:13-49
+88            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" >
+88-->E:\iamport-android-main\sdk\src\main\AndroidManifest.xml:84:13-75
+89        </activity>
+90    </application>
+91
+92</manifest>
